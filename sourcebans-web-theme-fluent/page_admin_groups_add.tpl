@@ -1,14 +1,14 @@
 {if NOT $permission_addgroup}
     <section class="error padding">
         <i class="fas fa-exclamation-circle"></i>
-        <div class="error_title">Oops, there's a problem (╯°□°）╯︵ ┻━┻</div>
+        <div class="error_title">哎呀，出现了个问题 (╯°□°)╯︵ ┻━┻</div>
 
         <div class="error_content">
-            Access Denied!
+            拒绝访问！
         </div>
 
         <div class="error_code">
-            Error code: <span class="text:bold">403 Forbidden</span>
+            错误代码: <span class="text:bold">403 Forbidden</span>
         </div>
     </section>
 {else}
@@ -37,10 +37,10 @@
 
             <select onchange="UpdateGroupPermissionCheckBoxes()" TABINDEX=2 class="form-select form-full" name="grouptype"
                 id="grouptype">
-                <option value="0">Please Select...</option>
-                <option value="1">Web Admin Group</option>
-                <option value="2">Server Admin Group</option>
-                <option value="3">Server Group</option>
+                <option value="0">请选择...</option>
+                <option value="1">网页管理员组</option>
+                <option value="2">服务器管理员组</option>
+                <option value="3">服务器组</option>
             </select>
 
             <div class="form-desc">
@@ -53,7 +53,7 @@
 
         <div class="flex flex-ai:center flex-jc:space-between margin-top">
             {sb_button text="Save Changes" onclick="ProcessGroup();" class="button button-success" id="agroup" submit=false}
-            {sb_button text="Back" onclick="history.go(-1)" class="button button-light" id="back" submit=false}
+            {sb_button text="返回" onclick="history.go(-1)" class="button button-light" id="back" submit=false}
         </div>
     </div>
 {/if}

@@ -2,7 +2,7 @@
   <div class="flex flex-jc:center flex-ai:center">
     <div class="layout_box layout_box_medium">
       <div class="layout_box_title">
-        <h2><i class="fa-solid fa-comment"></i> {$commenttype} Comment</h2>
+        <h2><i class="fa-solid fa-comment"></i> {$commenttype} 评论</h2>
       </div>
 
       <div class="padding">
@@ -63,14 +63,14 @@
                     <tr>
                         {if $view_bans}
                             <th class="text:left">
-                                <input type="checkbox" title="Select All" name="tickswitch" id="tickswitch" onclick="TickSelectAll()" class="form-check" />
+                                <input type="checkbox" title="选择全部" name="tickswitch" id="tickswitch" onclick="TickSelectAll()" class="form-check" />
                             </th>
                         {/if}
                         <th>MOD/Country</th>
-                        <th class="text:left">Date</th>
+                        <th class="text:left">日期</th>
                         <th class="text:left">Player</th>
                         {if !$hideadminname}
-                            <th class="text:left">Admin</th>
+                            <th class="text:left">管理员</th>
                         {/if}
                         <th class="text:left">Length</th>
                     </tr>
@@ -322,7 +322,7 @@
         <div class="layout_box padding:half margin-top flex flex-ai:center flex-jc:space-between m:flex-fd:column">
             {if $general_unban || $can_delete}
                 <div>
-                    <button onclick="TickSelectAll();return false;" title="Select All" name="tickswitchlink" id="tickswitchlink" class="button button:line button-light margin-right:half">Select All</button>
+                    <button onclick="TickSelectAll();return false;" title="选择全部" name="tickswitchlink" id="tickswitchlink" class="button button:line button-light margin-right:half">选择全部</button>
                     <select name="bulk_action" id="bulk_action" onchange="BulkEdit(this,'{$admin_postkey}');" class="form-select">
                         <option value="-1">Action</option>
                         {if $general_unban}
@@ -337,10 +337,10 @@
             {if $can_export}
                 <ul class="list-reset text:right">
                     <li>
-                        <a href="./exportbans.php?type=steam" title="Export Permanent SteamID Bans">Export Permanent SteamID Bans</a>
+                        <a href="./exportbans.php?type=steam" title="Export 永久 SteamID Bans">Export 永久 SteamID Bans</a>
                     </li>
                     <li>
-                        <a href="./exportbans.php?type=ip" title="Export Permanent IP Bans">Export Permanent IP Bans</a>
+                        <a href="./exportbans.php?type=ip" title="Export 永久 IP Bans">Export 永久 IP Bans</a>
                     </li>
                 </ul>
             {/if}

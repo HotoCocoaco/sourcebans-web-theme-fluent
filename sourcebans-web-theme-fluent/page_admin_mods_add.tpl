@@ -1,14 +1,14 @@
 {if NOT $permission_add}
     <section class="error padding">
         <i class="fas fa-exclamation-circle"></i>
-        <div class="error_title">Oops, there's a problem (╯°□°）╯︵ ┻━┻</div>
+        <div class="error_title">哎呀，出现了个问题 (╯°□°)╯︵ ┻━┻</div>
 
         <div class="error_content">
-            Access Denied!
+            拒绝访问！
         </div>
 
         <div class="error_code">
-            Error code: <span class="text:bold">403 Forbidden</span>
+            错误代码: <span class="text:bold">403 Forbidden</span>
         </div>
     </section>
 {else}
@@ -18,7 +18,7 @@
 
     <div class="padding">
         <div class="margin-bottom">
-            For more information or help regarding a certain subject move your mouse over the question mark.
+            有关某个项目的更多信息或帮助，请将鼠标移到问号上。
         </div>
 
         <div class="margin-bottom:half">
@@ -93,7 +93,7 @@
 
         <div class="padding flex flex-ai:center flex-jc:space-between">
             {sb_button text="Add Mod" onclick="ProcessMod();" class="button button-success" id="amod"}
-            {sb_button text="Back" onclick="history.go(-1)" class="button button-light" id="aback"}
+            {sb_button text="返回" onclick="history.go(-1)" class="button button-light" id="aback"}
         </div>
     </div>
 {/if}

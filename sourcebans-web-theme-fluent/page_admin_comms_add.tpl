@@ -1,14 +1,14 @@
 {if NOT $permission_addban}
     <section class="error padding">
         <i class="fas fa-exclamation-circle"></i>
-        <div class="error_title">Oops, there's a problem (╯°□°）╯︵ ┻━┻</div>
+        <div class="error_title">哎呀，出现了个问题 (╯°□°)╯︵ ┻━┻</div>
 
         <div class="error_content">
-            Access Denied!
+            拒绝访问！
         </div>
 
         <div class="error_code">
-            Error code: <span class="text:bold">403 Forbidden</span>
+            错误代码: <span class="text:bold">403 Forbidden</span>
         </div>
     </section>
 {else}
@@ -19,17 +19,17 @@
     <div class="padding">
         <div id="msg-green" class="message message:succes margin-bottom:half" style="display: none;">
             <h3>Block Added</h3>
-            <div>The new admin has been successfully added to the system.</div>
+            <div>新管理员已成功添加到系统中。</div>
             <div class="text:italic">Redirecting back to comms page</div>
         </div>
 
         <div class="margin-bottom">
-            For more information or help regarding a certain subject move your mouse over the question mark.
+            有关某个项目的更多信息或帮助，请将鼠标移到问号上。
         </div>
 
         <div class="margin-bottom:half">
             <label for="nickname" class="form-label form-label:bottom">
-                Nickname
+                昵称
             </label>
 
             <input type="hidden" id="fromsub" value="" />
@@ -73,17 +73,17 @@
 
             <select id="listReason" name="listReason" TABINDEX=4 class="form-select form-full"
                 onChange="changeReason(this[this.selectedIndex].value);">
-                <option value="" selected> -- Select Reason -- </option>
+                <option value="" selected> -- 选择原因 -- </option>
                 <optgroup label="Violation">
                     <option value="Obscene language">Obscene language</option>
                     <option value="Insult players">Insult players</option>
                     <option value="Admin disrespect">Admin disrespect</option>
-                    <option value="Inappropriate Language">Inappropriate Language</option>
+                    <option value="不适宜言语">不适宜言语</option>
                     <option value="Trading">Trading</option>
                     <option value="Spam in chat/voice">Spam</option>
                     <option value="Advertisement">Advertisement</option>
                 </optgroup>
-                <option value="other">Other Reason</option>
+                <option value="other">其他原因</option>
             </select>
 
             <div id="dreason" style="display:none;">
@@ -103,42 +103,42 @@
             </label>
 
             <select id="banlength" TABINDEX=5 class="form-select form-full">
-                <option value="0">Permanent</option>
+                <option value="0">永久</option>
                 <optgroup label="minutes">
-                    <option value="1">1 minute</option>
-                    <option value="5">5 minutes</option>
-                    <option value="10">10 minutes</option>
-                    <option value="15">15 minutes</option>
-                    <option value="30">30 minutes</option>
-                    <option value="45">45 minutes</option>
+                    <option value="1">1分钟</option>
+                    <option value="5">5分钟</option>
+                    <option value="10">10分钟</option>
+                    <option value="15">15分钟</option>
+                    <option value="30">30分钟</option>
+                    <option value="45">45分钟</option>
                 </optgroup>
                 <optgroup label="hours">
-                    <option value="60">1 hour</option>
-                    <option value="120">2 hours</option>
-                    <option value="180">3 hours</option>
-                    <option value="240">4 hours</option>
-                    <option value="480">8 hours</option>
-                    <option value="720">12 hours</option>
+                    <option value="60">1小时</option>
+                    <option value="120">2小时</option>
+                    <option value="180">3小时</option>
+                    <option value="240">4小时</option>
+                    <option value="480">8小时</option>
+                    <option value="720">12小时</option>
                 </optgroup>
                 <optgroup label="days">
-                    <option value="1440">1 day</option>
-                    <option value="2880">2 days</option>
-                    <option value="4320">3 days</option>
-                    <option value="5760">4 days</option>
-                    <option value="7200">5 days</option>
-                    <option value="8640">6 days</option>
+                    <option value="1440">1天</option>
+                    <option value="2880">2天</option>
+                    <option value="4320">3天</option>
+                    <option value="5760">4天</option>
+                    <option value="7200">5天</option>
+                    <option value="8640">6天</option>
                 </optgroup>
                 <optgroup label="weeks">
-                    <option value="10080">1 week</option>
-                    <option value="20160">2 weeks</option>
-                    <option value="30240">3 weeks</option>
+                    <option value="10080">1周</option>
+                    <option value="20160">2周</option>
+                    <option value="30240">3周</option>
                 </optgroup>
                 <optgroup label="months">
-                    <option value="43200">1 month</option>
-                    <option value="86400">2 months</option>
-                    <option value="129600">3 months</option>
-                    <option value="259200">6 months</option>
-                    <option value="518400">12 months</option>
+                    <option value="43200">1月</option>
+                    <option value="86400">2月</option>
+                    <option value="129600">3月</option>
+                    <option value="259200">6月</option>
+                    <option value="518400">12月</option>
                 </optgroup>
             </select>
 
@@ -147,7 +147,7 @@
 
         <div class="flex flex-ai:center flex-jc:space-between margin-top">
             {sb_button text="Add block" onclick="ProcessBan();" class="button button-success" id="aban" submit=false}
-            {sb_button text="Back" onclick="history.go(-1)" class="button button-light" id="aback"}
+            {sb_button text="返回" onclick="history.go(-1)" class="button button-light" id="aback"}
         </div>
     </div>
 {/if}

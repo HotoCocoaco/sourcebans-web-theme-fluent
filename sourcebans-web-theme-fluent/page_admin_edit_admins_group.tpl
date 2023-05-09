@@ -5,7 +5,7 @@
 
     <div class="padding">
         <div>
-            For more information or help regarding a certain subject move your mouse over the question mark.
+            有关某个项目的更多信息或帮助，请将鼠标移到问号上。
         </div>
         <div class="margin-bottom:half">
             Choose the new groups that you want <span class="text:bold">{$group_admin_name}</span> to appear in.
@@ -14,7 +14,7 @@
         <form action="" method="post">
             <div class="margin-bottom:half">
                 <label for="wg" class="form-label form-label:bottom">
-                    Web Admin Group
+                    网页管理员组
                 </label>
 
                 <select name="wg" id="wg" class="form-select form-full">
@@ -32,7 +32,7 @@
 
             <div class="margin-bottom:half">
                 <label for="sg" class="form-label form-label:bottom">
-                    Server Admin Group
+                    服务器管理员组
                 </label>
 
                 <select name="sg" id="sg" class="form-select form-full">
@@ -51,7 +51,7 @@
 
             <div class="flex flex-ai:center flex-jc:space-between margin-top">
                 {sb_button text="Save Changes" class="button button-success" id="agroups" submit=true}
-                {sb_button text="Back" onclick="history.go(-1)" class="button button-light" id="aback"}
+                {sb_button text="返回" onclick="history.go(-1)" class="button button-light" id="aback"}
             </div>
         </form>
     </div>

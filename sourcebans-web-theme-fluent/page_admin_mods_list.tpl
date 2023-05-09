@@ -1,19 +1,19 @@
 {if NOT $permission_listmods}
     <section class="error padding">
         <i class="fas fa-exclamation-circle"></i>
-        <div class="error_title">Oops, there's a problem (╯°□°）╯︵ ┻━┻</div>
+        <div class="error_title">哎呀，出现了个问题 (╯°□°)╯︵ ┻━┻</div>
 
         <div class="error_content">
-            Access Denied!
+            拒绝访问！
         </div>
 
         <div class="error_code">
-            Error code: <span class="text:bold">403 Forbidden</span>
+            错误代码: <span class="text:bold">403 Forbidden</span>
         </div>
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-gamepad"></i> Server Mods ({$mod_count})</h2>
+        <h2><i class="fas fa-gamepad"></i> 服务器 Mods ({$mod_count})</h2>
     </div>
 
     <div class="padding">

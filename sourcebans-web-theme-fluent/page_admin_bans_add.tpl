@@ -1,29 +1,29 @@
 {if NOT $permission_addban}
     <section class="error padding">
         <i class="fas fa-exclamation-circle"></i>
-        <div class="error_title">Oops, there's a problem (╯°□°）╯︵ ┻━┻</div>
+        <div class="error_title">哎呀，出现了个问题 (╯°□°)╯︵ ┻━┻</div>
 
         <div class="error_content">
-            Access Denied!
+            拒绝访问！
         </div>
 
         <div class="error_code">
-            Error code: <span class="text:bold">403 Forbidden</span>
+            错误代码: <span class="text:bold">403 Forbidden</span>
         </div>
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-user-times"></i> Add Ban</h2>
+        <h2><i class="fas fa-user-times"></i> 增加封禁</h2>
     </div>
 
     <div class="padding">
         <div class="margin-bottom">
-            For more information or help regarding a certain subject move your mouse over the question mark.
+            有关某个项目的更多信息或帮助，请将鼠标移到问号上。
         </div>
 
         <div class="margin-bottom:half">
             <label for="nickname" class="form-label form-label:bottom">
-                Nickname
+                昵称
             </label>
 
             <input type="hidden" id="fromsub" value="" />
@@ -34,12 +34,12 @@
 
         <div class="margin-bottom:half">
             <label for="type" class="form-label form-label:bottom">
-                Ban Type
+                封禁类型
             </label>
 
             <select id="type" name="type" TABINDEX=2 class="form-select form-full">
                 <option value="0">Steam ID</option>
-                <option value="1">IP Address</option>
+                <option value="1">IP地址</option>
             </select>
         </div>
 
@@ -55,7 +55,7 @@
 
         <div class="margin-bottom:half">
             <label for="ip" class="form-label form-label:bottom">
-                IP Address
+                IP地址
             </label>
 
             <input type="text" TABINDEX=3 class="form-input form-full" id="ip" name="ip" />
@@ -65,39 +65,39 @@
 
         <div class="margin-bottom:half">
             <label for="listReason" class="form-label form-label:bottom">
-                Ban Reason
+                封禁原因
             </label>
 
             <select id="listReason" name="listReason" TABINDEX=4 class="form-select form-full"
                 onChange="changeReason(this[this.selectedIndex].value);">
-                <option value="" selected> -- Select Reason -- </option>
-                <optgroup label="Hacking">
-                    <option value="Aimbot">Aimbot</option>
-                    <option value="Antirecoil">Antirecoil</option>
-                    <option value="Wallhack">Wallhack</option>
-                    <option value="Spinhack">Spinhack</option>
-                    <option value="Multi-Hack">Multi-Hack</option>
-                    <option value="No Smoke">No Smoke</option>
-                    <option value="No Flash">No Flash</option>
+                <option value="" selected> -- 选择原因 -- </option>
+                <optgroup label="作弊">
+                    <option value="自瞄">自瞄</option>
+                    <option value="无后坐力">无后坐力</option>
+                    <option value="透视">透视</option>
+                    <option value="陀螺">陀螺</option>
+                    <option value="多重作弊">多重作弊</option>
+                    <option value="无视烟雾">无视烟雾</option>
+                    <option value="无视闪光">无视闪光</option>
                 </optgroup>
-                <optgroup label="Behavior">
-                    <option value="Team Killing">Team Killing</option>
-                    <option value="Team Flashing">Team Flashing</option>
-                    <option value="Spamming Mic/Chat">Spamming Mic/Chat</option>
-                    <option value="Inappropriate Spray">Inappropriate Spray</option>
-                    <option value="Inappropriate Language">Inappropriate Language</option>
-                    <option value="Inappropriate Name">Inappropriate Name</option>
-                    <option value="Ignoring Admins">Ignoring Admins</option>
-                    <option value="Team Stacking">Team Stacking</option>
+                <optgroup label="行为">
+                    <option value="恶意击杀队友">恶意击杀队友</option>
+                    <option value="恶意闪光队友">恶意闪光队友</option>
+                    <option value="刷屏和刷麦">刷屏和刷麦</option>
+                    <option value="不适宜喷漆">不适宜喷漆</option>
+                    <option value="不适宜言语">不适宜言语</option>
+                    <option value="不适宜名字">不适宜名字</option>
+                    <option value="无视管理员">无视管理员</option>
+                    <option value="团队堆叠">团队堆叠</option>
                 </optgroup>
                 {if $customreason}
-                    <optgroup label="Custom">
+                    <optgroup label="自定义">
                         {foreach from=$customreason item="creason"}
                             <option value="{$creason}">{$creason}</option>
                         {/foreach}
                     </optgroup>
                 {/if}
-                <option value="other">Other Reason</option>
+                <option value="other">其他原因</option>
             </select>
 
             <div id="dreason" class="margin-top:half" style="display:none;">
@@ -109,46 +109,46 @@
 
         <div class="margin-bottom:half">
             <label for="banlength" class="form-label form-label:bottom">
-                Ban Length
+                封禁长度
             </label>
 
             <select id="banlength" TABINDEX=5 class="form-select form-full">
-                <option value="0">Permanent</option>
+                <option value="0">永久</option>
                 <optgroup label="minutes">
-                    <option value="1">1 minute</option>
-                    <option value="5">5 minutes</option>
-                    <option value="10">10 minutes</option>
-                    <option value="15">15 minutes</option>
-                    <option value="30">30 minutes</option>
-                    <option value="45">45 minutes</option>
+                    <option value="1">1分钟</option>
+                    <option value="5">5分钟</option>
+                    <option value="10">10分钟</option>
+                    <option value="15">15分钟</option>
+                    <option value="30">30分钟</option>
+                    <option value="45">45分钟</option>
                 </optgroup>
                 <optgroup label="hours">
-                    <option value="60">1 hour</option>
-                    <option value="120">2 hours</option>
-                    <option value="180">3 hours</option>
-                    <option value="240">4 hours</option>
-                    <option value="480">8 hours</option>
-                    <option value="720">12 hours</option>
+                    <option value="60">1小时</option>
+                    <option value="120">2小时</option>
+                    <option value="180">3小时</option>
+                    <option value="240">4小时</option>
+                    <option value="480">8小时</option>
+                    <option value="720">12小时</option>
                 </optgroup>
                 <optgroup label="days">
-                    <option value="1440">1 day</option>
-                    <option value="2880">2 days</option>
-                    <option value="4320">3 days</option>
-                    <option value="5760">4 days</option>
-                    <option value="7200">5 days</option>
-                    <option value="8640">6 days</option>
+                    <option value="1440">1天</option>
+                    <option value="2880">2天</option>
+                    <option value="4320">3天</option>
+                    <option value="5760">4天</option>
+                    <option value="7200">5天</option>
+                    <option value="8640">6天</option>
                 </optgroup>
                 <optgroup label="weeks">
-                    <option value="10080">1 week</option>
-                    <option value="20160">2 weeks</option>
-                    <option value="30240">3 weeks</option>
+                    <option value="10080">1周</option>
+                    <option value="20160">2周</option>
+                    <option value="30240">3周</option>
                 </optgroup>
                 <optgroup label="months">
-                    <option value="43200">1 month</option>
-                    <option value="86400">2 months</option>
-                    <option value="129600">3 months</option>
-                    <option value="259200">6 months</option>
-                    <option value="518400">12 months</option>
+                    <option value="43200">1月</option>
+                    <option value="86400">2月</option>
+                    <option value="129600">3月</option>
+                    <option value="259200">6月</option>
+                    <option value="518400">12月</option>
                 </optgroup>
             </select>
 
@@ -157,17 +157,17 @@
 
         <div class="margin-bottom:half">
             <label for="udemo" class="form-label form-label:bottom">
-                Upload Demo
+                上传Demo
             </label>
 
-            {sb_button text="Upload a demo" onclick="childWindow=open('pages/admin.uploaddemo.php','upload','resizable=no,width=300,height=130');" class="button button-primary" id="udemo" submit=false}
+            {sb_button text="上传一个Demo" onclick="childWindow=open('pages/admin.uploaddemo.php','upload','resizable=no,width=300,height=130');" class="button button-primary" id="udemo" submit=false}
 
             <div id="demo.msg" class="message message:error margin-top:half" style="display: none;"></div>
         </div>
 
         <div class="flex flex-ai:center flex-jc:space-between margin-top">
-            {sb_button text="Add Ban" onclick="ProcessBan();" class="button button-success" id="aban" submit=false}
-            {sb_button text="Back" onclick="history.go(-1)" class="button button-light" id="aback"}
+            {sb_button text="增加封禁" onclick="ProcessBan();" class="button button-success" id="aban" submit=false}
+            {sb_button text="返回" onclick="history.go(-1)" class="button button-light" id="aback"}
         </div>
     </div>
 {/if}

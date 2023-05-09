@@ -1,6 +1,6 @@
 <div class="layout_box flex:11 admin_tab_content">
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-server"></i> Admin Server Access</h2>
+        <h2><i class="fas fa-server"></i> Admin 服务器 Access</h2>
     </div>
 
     <div class="padding">
@@ -16,7 +16,7 @@
         {else}
             <form action="" method="post">
                 {if $group_list}
-                    <h3>Server Groups</h3>
+                    <h3>服务器 Groups</h3>
 
                     {foreach from=$group_list item="group"}
                         <div class="margin-bottom:half">
@@ -49,7 +49,7 @@
                         {sb_button text="Save Changes" class="button button-success" id="editadminserver" submit=true}
                     {/if}
 
-                    {sb_button text="Back" onclick="history.go(-1)" class="button button-light" id="aback"}
+                    {sb_button text="返回" onclick="history.go(-1)" class="button button-light" id="aback"}
                 </div>
             </form>
         {/if}

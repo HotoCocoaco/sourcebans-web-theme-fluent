@@ -1184,9 +1184,9 @@ function TickSelectAll() {
     $('tickswitchlink').innerHTML = 'Deselect All';
   } else {
     $('tickswitch').value = 0;
-    $('tickswitch').setProperty('title', 'Select All');
-    $('tickswitchlink').setProperty('title', 'Select All');
-    $('tickswitchlink').innerHTML = 'Select All';
+    $('tickswitch').setProperty('title', '选择全部');
+    $('tickswitchlink').setProperty('title', '选择全部');
+    $('tickswitchlink').innerHTML = '选择全部';
   }
 }
 

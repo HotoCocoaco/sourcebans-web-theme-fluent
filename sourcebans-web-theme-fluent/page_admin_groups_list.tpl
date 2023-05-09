@@ -1,14 +1,14 @@
 {if NOT $permission_listgroups}
     <section class="error padding">
         <i class="fas fa-exclamation-circle"></i>
-        <div class="error_title">Oops, there's a problem (╯°□°）╯︵ ┻━┻</div>
+        <div class="error_title">哎呀，出现了个问题 (╯°□°)╯︵ ┻━┻</div>
 
         <div class="error_content">
-            Access Denied!
+            拒绝访问！
         </div>
 
         <div class="error_code">
-            Error code: <span class="text:bold">403 Forbidden</span>
+            错误代码: <span class="text:bold">403 Forbidden</span>
         </div>
     </section>
 {else}
@@ -117,7 +117,7 @@
                 </tbody>
             </table>
         </div>
-        	<h3 style="color: var(--table-unbanned-text);">Server Admin Groups ({$server_admin_group_count})</h3>
+        	<h3 style="color: var(--table-unbanned-text);">服务器 Admin Groups ({$server_admin_group_count})</h3>
 
         <div class="table table_box">
             <table>
@@ -210,7 +210,7 @@
                                             <table>
                                                 <thead>
                                                     <tr>
-                                                        <th class="text:left">Type</th>
+                                                        <th class="text:left">类型</th>
                                                         <th class="text:left">Name</th>
                                                         <th class="text:left">Access</th>
                                                     </tr>
@@ -235,7 +235,7 @@
             </table>
         </div>
 
-        <h3>Server Groups ({$server_group_count})</h3>
+        <h3>服务器 Groups ({$server_group_count})</h3>
 
         <div class="table table_box">
             <table>

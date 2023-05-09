@@ -5,7 +5,7 @@
 			 <li>
 					<a href="index.php?p=admin&amp;c=admins">
 					  <i class="fas fa-user"></i>
-					  <span>Admin</span>
+					  <span>管理员</span>
 				  </a>
 			 </li>
     	{/if}
@@ -37,7 +37,7 @@
             <li>
                 <a href="index.php?p=admin&amp;c=servers">
                     <i class="fas fa-server"></i>
-                    <span>Server</span>
+                    <span>服务器</span>
                 </a>
             </li>
         {/if}
@@ -115,7 +115,7 @@
 	
 	<div class="layout_box">
         <div class="layout_box_title">
-            <h2 align="center"><i class="fas fa-server"></i> Server Information</h2>
+            <h2 align="center"><i class="fas fa-server"></i> 服务器 Information</h2>
         </div>
         <div class="padding" align="center">
             <ul class="list-reset">

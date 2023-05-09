@@ -19,7 +19,7 @@
       <table>
         <thead>
           <tr>
-            <th style="width: 15%"><span class="responsive_show:desktop">MOD | </span>Type</th>
+            <th style="width: 15%"><span class="responsive_show:desktop">MOD | </span>类型</th>
             <th style="width: 28%" class="text:left">Date/Time</th>
 			<th style="width: 28%" class="text:left">Name</th>
             <th style="width: 28%">Length</th>
@@ -65,7 +65,7 @@
         <table>
           <thead>
             <tr>
-              <th><span class="responsive_show:desktop">MOD | </span>Type</th>
+              <th><span class="responsive_show:desktop">MOD | </span>类型</th>
 			  <th class="text:left">Date/Time</th>
               <th class="text:left">Name</th>
               <th>Length</th>
@@ -110,7 +110,7 @@
         <table>
           <thead>
             <tr>
-              <th class="text:center">Type</th>
+              <th class="text:center">类型</th>
 			        <th class="text:left">Date/Time</th>
               <th class="text:left">Name</th>
             </tr>
@@ -123,7 +123,7 @@
               {else}
                 onclick="{$player.popup}"
               {/if}
-              onmouseout="this.className='tbl_out'" onmouseover="this.className='tbl_hover'" style="cursor: pointer;" id="{$player.server}" title="Querying Server Data...">
+              onmouseout="this.className='tbl_out'" onmouseover="this.className='tbl_hover'" style="cursor: pointer;" id="{$player.server}" title="Querying 服务器 Data...">
                 <td class="text:center">
                   <i class="fas fa-ban fa-lg"></i>
                 </td>

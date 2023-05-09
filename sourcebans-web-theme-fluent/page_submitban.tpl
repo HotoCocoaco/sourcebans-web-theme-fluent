@@ -26,12 +26,12 @@
 
                 <div class="margin-bottom:half">
                     <label for="Type" class="form-label form-label:bottom">
-                        Ban Type
+                        封禁类型
                     </label>
                     <select id="Type" name="Type" class="form-select form-full"
                         onChange="changeType(this[this.selectedIndex].value);">
                         <option value="0">Steam ID</option>
-                        <option value="1">IP Address</option>
+                        <option value="1">IP地址</option>
                     </select>
                 </div>
 
@@ -53,7 +53,7 @@
 
                 <div class="margin-bottom:half">
                     <label for="PlayerName" class="form-label form-label:bottom">
-                        Players Nickname <span class="mandatory">*</span>
+                        Players 昵称 <span class="mandatory">*</span>
                     </label>
                     <input type="text" id="PlayerName" size="40" maxlength="70" name="PlayerName" value="{$player_name}"
                         class="form-input form-full" />
@@ -85,10 +85,10 @@
 
                 <div class="margin-bottom:half">
                     <label for="server" class="form-label form-label:bottom">
-                        Server <span class="mandatory">*</span>
+                        服务器 <span class="mandatory">*</span>
                     </label>
                     <select id="server" name="server" class="form-select form-full">
-                        <option value="-1">-- Select Server --</option>
+                        <option value="-1">-- Select 服务器 --</option>
                         {foreach from=$server_list item="server"}
                             <option value="{$server.sid}" {if $server_selected==$server.sid}selected{/if}>
                                 {$server.hostname}</option>

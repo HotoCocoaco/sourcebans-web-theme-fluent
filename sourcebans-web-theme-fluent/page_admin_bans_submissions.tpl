@@ -1,14 +1,14 @@
 {if NOT $permission_protests}
     <section class="error padding">
         <i class="fas fa-exclamation-circle"></i>
-        <div class="error_title">Oops, there's a problem (╯°□°）╯︵ ┻━┻</div>
+        <div class="error_title">哎呀，出现了个问题 (╯°□°)╯︵ ┻━┻</div>
 
         <div class="error_content">
-            Access Denied!
+            拒绝访问！
         </div>
 
         <div class="error_code">
-            Error code: <span class="text:bold">403 Forbidden</span>
+            错误代码: <span class="text:bold">403 Forbidden</span>
         </div>
     </section>
 {else}
@@ -29,7 +29,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th class="text:left">Nickname</th>
+                        <th class="text:left">昵称</th>
                         <th class="text:left">Steam ID</th>
                         <th>Action</th>
                     </tr>
@@ -116,7 +116,7 @@
                                             </li>
 
                                             <li>
-                                                <span><i class="fa-solid fa-server"></i> Server</span>
+                                                <span><i class="fa-solid fa-server"></i> 服务器</span>
                                                 <div id="sub{$sub.subid}">
                                                     {if $sub.hostname == ""}
                                                         <span class="text:italic">Retrieving Hostname</span>

@@ -1,14 +1,14 @@
 {if NOT $permission_import}
     <section class="error padding">
         <i class="fas fa-exclamation-circle"></i>
-        <div class="error_title">Oops, there's a problem (╯°□°）╯︵ ┻━┻</div>
+        <div class="error_title">哎呀，出现了个问题 (╯°□°)╯︵ ┻━┻</div>
 
         <div class="error_content">
-            Access Denied!
+            拒绝访问！
         </div>
 
         <div class="error_code">
-            Error code: <span class="text:bold">403 Forbidden</span>
+            错误代码: <span class="text:bold">403 Forbidden</span>
         </div>
     </section>
 {else}
@@ -18,19 +18,19 @@
 
     <div class="padding">
         <div class="margin-bottom">
-            For more information or help regarding a certain subject move your mouse over the question mark.
+            有关某个项目的更多信息或帮助，请将鼠标移到问号上。
         </div>
         <form action="" method="post" enctype="multipart/form-data">
             <div class="margin-bottom:half">
                 <label for="importFile" class="form-label form-label:bottom">
-                    File
+                    文件
                 </label>
 
                 <input type="file" TABINDEX=1 class="form-input form-full" id="importFile" name="importFile" />
                 <div class="form-desc">
-                    Select the <span class="text:bold">banned_users.cfg</span> or <span
+                    选择 <span class="text:bold">banned_users.cfg</span> 或 <span
                         class="text:bold">banned_ip.cfg</span>
-                    file to upload and add bans.
+                    文件来上传和添加封禁。
                 </div>
 
                 <div id="file.msg" class="message message:error margin-top:half" style="display: none;"></div>
@@ -39,20 +39,20 @@
             <div class="margin-bottom:half">
                 <input type="checkbox" class="form-check" name="friendsname" id="friendsname" />
                 <label for="friendsname" class="form-label form-label:left">
-                    Get Names
+                    获取名字
                 </label>
 
                 <div class="form-desc">
-                    Check this box, if you want to get the names of the players from their steam community profile. <span
-                        class="text:italic">(just works with banned_users.cfg)</span>.
+                    如果你想从他们的steam社区档案中获得玩家的名字，请选中此框。 <span
+                        class="text:italic">(仅对 banned_users.cfg 有效)</span>.
                 </div>
 
                 <div id="friendsname.msg" class="message message:error margin-top:half" style="display: none;"></div>
             </div>
 
             <div class="flex flex-ai:center flex-jc:space-between margin-top">
-                {sb_button text="Import" class="button button-success" id="iban" submit=true}
-                {sb_button text="Back" onclick="history.go(-1)" class="button button-light" id="iback"}
+                {sb_button text="导入" class="button button-success" id="iban" submit=true}
+                {sb_button text="返回" onclick="history.go(-1)" class="button button-light" id="iback"}
             </div>
         </form>
     </div>

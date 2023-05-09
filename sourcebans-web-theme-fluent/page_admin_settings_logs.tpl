@@ -13,7 +13,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>Type</th>
+                    <th>类型</th>
                     <th class="text:left">Event</th>
                     <th class="text:left">Date/Time</th>
                     <th>User</th>

@@ -2,7 +2,7 @@
   <div class="flex flex-jc:center flex-ai:center">
     <div class="layout_box layout_box_medium">
       <div class="layout_box_title">
-        <h2><i class="fa-solid fa-comment"></i> {$commenttype} Comment</h2>
+        <h2><i class="fa-solid fa-comment"></i> {$commenttype} 评论</h2>
       </div>
 
       <div class="padding">
@@ -63,10 +63,10 @@
           <thead>
             <tr>
               <th>MOD/Type</th>
-              <th class="text:left">Date</th>
+              <th class="text:left">日期</th>
               <th class="text:left">Player</th>
               {if !$hideadminname}
-                <th class="text:left">Admin</th>
+                <th class="text:left">管理员</th>
               {/if}
               <th>Length</th>
             </tr>

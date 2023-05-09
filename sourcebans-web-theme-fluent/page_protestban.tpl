@@ -20,12 +20,12 @@
 
                 <div class="margin-bottom:half">
                     <label for="Type" class="form-label form-label:bottom">
-                        Ban Type
+                        封禁类型
                     </label>
                     <select id="Type" name="Type" class="form-select form-full"
                         onChange="changeType(this[this.selectedIndex].value);">
                         <option value="0">Steam ID</option>
-                        <option value="1">IP Address</option>
+                        <option value="1">IP地址</option>
                     </select>
                 </div>
 

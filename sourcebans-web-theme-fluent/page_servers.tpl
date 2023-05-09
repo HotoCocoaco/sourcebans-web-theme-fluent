@@ -27,7 +27,7 @@
                             </td>
                             <td id="os_{$server.sid}" class="text:center"></td>
                             <td id="vac_{$server.sid}" class="text:center"></td>
-                            <td id="host_{$server.sid}"><i>Querying Server Data...</i></td>
+                            <td id="host_{$server.sid}"><i>Querying 服务器 Data...</i></td>
                             <td>{$server.ip}:{$server.port}</td>
                             <td id="players_{$server.sid}" class="text:center">N/A</td>
                             <td id="map_{$server.sid}" class="text:center">N/A</td>

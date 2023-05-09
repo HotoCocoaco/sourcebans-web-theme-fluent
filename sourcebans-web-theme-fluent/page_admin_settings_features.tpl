@@ -4,7 +4,7 @@
 
 <div class="padding">
     <div class="margin-bottom">
-        For more information or help regarding a certain subject move your mouse over the question mark.
+        有关某个项目的更多信息或帮助，请将鼠标移到问号上。
     </div>
 
     <form action="" method="post">
@@ -121,7 +121,7 @@
 
         <div class="flex flex-ai:center flex-jc:space-between">
             {sb_button text="Save Changes" class="button button-success" id="fsettings" submit=true}
-            {sb_button text="Back" class="button button-light" id="fback"}
+            {sb_button text="返回" class="button button-light" id="fback"}
         </div>
     </form>
 </div>

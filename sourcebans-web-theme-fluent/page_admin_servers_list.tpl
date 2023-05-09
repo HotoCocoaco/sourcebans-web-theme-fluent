@@ -1,6 +1,6 @@
 <div class="layout_box flex:11 admin_tab_content tabcontent" id="List servers" style="display: block;">
     {if NOT $permission_list}
-        Access Denied
+        拒绝访问
     {else}
         <div class="admin_tab_content_title">
             <h2><i class="fas fa-server"></i> Servers (<span id="srvcount">{$server_count}</span>)</h2>
@@ -33,7 +33,7 @@
                                 </td>
                                 <td id="host_{$server.sid}">
                                     <span class="text:italic">
-                                        Querying Server Data...
+                                        Querying 服务器 Data...
                                     </span>
                                 </td>
                                 <td id="players_{$server.sid}" class="text:center">

@@ -436,7 +436,7 @@
 
     <div class="padding flex flex-ai:center flex-jc:space-between">
         {sb_button text="Save Changes" class="button button-success" id="asettings" submit=true}
-        {sb_button text="Back" class="button button-light" id="aback"}
+        {sb_button text="返回" class="button button-light" id="aback"}
     </div>
 </form>
 <script type="text/javascript" src="./includes/tinymce/tinymce.min.js"></script>

@@ -1,7 +1,7 @@
 <div class="flex flex-jc:center flex-ai:center">
     <div class="layout_box_small layout_box">
         <div class="layout_box_title">
-            <h2>Admin Login</h2>
+            <h2>管理员登录</h2>
         </div>
 
         <div class="padding">

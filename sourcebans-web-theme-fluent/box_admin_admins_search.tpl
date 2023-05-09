@@ -5,7 +5,7 @@
         <tbody>
           <tr class="collapse">
             <td class="text:center">
-              <span class="text:bold">Advanced Search</span> (Click)
+              <span class="text:bold">高级搜索</span> (Click)
             </td>
           </tr>
           <tr class="table_hide">
@@ -16,7 +16,7 @@
                     <input id="name_" name="search_type" class="form-radio" type="radio" value="name" />
 
                     <label for="nick" class="form-label form-label:bottom">
-                      Nickname
+                      昵称
                     </label>
 
                     <input class="form-input form-full" type="text" id="nick" value=""
@@ -35,8 +35,8 @@
                         onmouseup="$('steam_').checked = true" />
 
                       <select class="form-select form-full" id="steam_match" onmouseup="$('steam_').checked = true">
-                        <option value="0" selected>Exact Match</option>
-                        <option value="1">Partial Match</option>
+                        <option value="0" selected>精确匹配</option>
+                        <option value="1">模糊匹配</option>
                       </select>
                     </div>
                   </div>
@@ -59,7 +59,7 @@
                     <input id="webgroup_" type="radio" name="search_type" class="form-radio" value="radiobutton" />
 
                     <label for="webgroup" class="form-label form-label:bottom form-label:right">
-                      Web Group
+                      网页组
                     </label>
 
                     <select class="form-select form-full" id="webgroup" onmouseup="$('webgroup_').checked = true">
@@ -73,7 +73,7 @@
                     <input id="srvadmgroup_" type="radio" name="search_type" class="form-radio" value="radiobutton" />
 
                     <label for="srvadmgroup" class="form-label form-label:bottom form-label:right">
-                      Server Admin Group
+                      服务器管理员组
                     </label>
 
                     <select class="form-select form-full" id="srvadmgroup" onmouseup="$('srvadmgroup_').checked = true">
@@ -88,7 +88,7 @@
                     <input id="srvgroup_" type="radio" name="search_type" class="form-radio" value="radiobutton" />
 
                     <label for="srvgroup" class="form-label form-label:bottom form-label:right">
-                      Server Group
+                      服务器组
                     </label>
 
                     <select class="form-select form-full" id="srvgroup" onmouseup="$('srvgroup_').checked = true">
@@ -102,7 +102,7 @@
                     <input id="admwebflags_" name="search_type" type="radio" class="form-radio" value="radiobutton" />
 
                     <label for="admwebflag" class="form-label form-label:bottom form-label:right">
-                      Web Permissions
+                      网页权限
                     </label>
 
                     <select class="form-select form-full" id="admwebflag" name="admwebflag"
@@ -118,7 +118,7 @@
                     <input id="admsrvflags_" name="search_type" type="radio" class="form-radio" value="radiobutton">
 
                     <label for="admwebflag" class="form-label form-label:bottom form-label:right">
-                      Server Permissions
+                      服务器权限
                     </label>
 
                     <select class="form-select form-full" id="admwebflag" name="admsrvflag"
@@ -135,7 +135,7 @@
 
 
                     <label for="server" class="form-label form-label:bottom form-label:right">
-                      Server
+                      服务器
                     </label>
 
 

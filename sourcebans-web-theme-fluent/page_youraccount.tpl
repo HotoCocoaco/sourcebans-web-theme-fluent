@@ -10,7 +10,7 @@
 
         <div class="flex m:flex-fd:column">
             <div class="flex:11">
-                <h3 style="color: var(--table-permanent-text);">Web Permissions</h3>
+                <h3 style="color: var(--table-permanent-text);">网页权限</h3>
 
                 <ul>
                     -{if $web_permissions}-
@@ -24,7 +24,7 @@
             </div>
 
             <div class="flex:11">
-                <h3 style="color: var(--table-unbanned-text);">Server Permissions</h3>
+                <h3 style="color: var(--table-unbanned-text);">服务器权限</h3>
 
                 <ul>
                     -{if $server_permissions}-
@@ -101,9 +101,9 @@
 </div>
 
 
-<div class="layout_box flex:11 admin_tab_content tabcontent" id="Server Password">
+<div class="layout_box flex:11 admin_tab_content tabcontent" id="服务器 Password">
     <div class="admin_tab_content_title">
-        <h2><i class="fab fa-steam-symbol"></i> Change Server Password</h2>
+        <h2><i class="fab fa-steam-symbol"></i> Change 服务器 Password</h2>
     </div>
 
     <div class="padding">
@@ -121,7 +121,7 @@
         -{if $srvpwset}-
             <div class="margin-bottom:half">
                 <label for="scurrent" class="form-label form-label:bottom">
-                    Current Server Password
+                    Current 服务器 Password
                 </label>
 
                 <input type="password" onblur="xajax_CheckSrvPassword(-{$user_aid}-, $('scurrent').value);"
