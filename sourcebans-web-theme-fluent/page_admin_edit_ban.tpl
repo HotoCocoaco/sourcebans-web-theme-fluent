@@ -3,13 +3,13 @@
     <div id="0">
         <div id="msg-green" style="display:none;">
             <i class="fas fa-check fa-2x"></i>
-            <b>Ban Updated</b>
+            <b>封禁已更新</b>
             <br />
-            The ban details have been updated.<br /><br />
-            <i>Redirecting back to bans page</i>
+            详情已更新。<br /><br />
+            <i>重定向到封禁页面</i>
         </div>
         <div class="admin_tab_content_title">
-            <h2><i class="fas fa-user-edit"></i> Ban Details</h2>
+            <h2><i class="fas fa-user-edit"></i> 封禁详情</h2>
 		</div>
 		<div class="padding">
             有关某个项目的更多信息或帮助，请将鼠标移到问号上。<br /><br />
@@ -18,7 +18,7 @@
                 <tr>
                     <td valign="top" width="35%">
                         <div class="rowdesc">
-                            -{help_icon title="Player name" message="This is the name of the player that was banned."}-Player name
+                            -{help_icon title="玩家姓名" message="这是被封禁玩家的名字。"}-玩家姓名
                         </div>
                     </td>
                     <td>
@@ -30,7 +30,7 @@
                     <tr>
                     <td valign="top" width="35%">
                         <div class="rowdesc">
-                            -{help_icon title="封禁类型" message="Choose whether to ban by Steam ID or IP address."}-封禁类型
+                            -{help_icon title="封禁类型" message="选择是按照SteamID封禁还是IP地址。"}-封禁类型
                         </div>
                     </td>
                     <td>
@@ -45,7 +45,7 @@
                 <tr>
                     <td valign="top">
                         <div class="rowdesc">
-                            -{help_icon title="Steam ID" message="This is the Steam ID of the player that is banned. You may want to type a Community ID either."}-Steam ID
+                            -{help_icon title="Steam ID" message="这是被禁止的玩家的Steam ID。您可能也想键入Community ID。"}-Steam ID
                         </div>
                     </td>
                 <td>
@@ -58,7 +58,7 @@
                 <tr>
                     <td valign="top" width="35%">
                         <div class="rowdesc">
-                            -{help_icon title="IP" message="This is the IP of the player that is banned"}-IP地址
+                            -{help_icon title="IP" message="被封禁的玩家的IP地址"}-IP地址
                         </div>
                     </td>
                     <td>
@@ -71,7 +71,7 @@
                 <tr>
                     <td valign="top" width="35%">
                         <div class="rowdesc">
-                            -{help_icon title="Reason" message="The reason that this player was banned."}-Reason
+                            -{help_icon title="原因" message="此玩家被封禁的原因"}-原因
                         </div>
                     </td>
                     <td>
@@ -115,7 +115,7 @@
                 </tr>
                 <tr>
                     <td valign="top" width="35%">
-                        <div class="rowdesc">-{help_icon title="封禁长度" message="Select how long you want to ban this person for."}-封禁长度 </div>
+                        <div class="rowdesc">-{help_icon title="封禁长度" message="选择你想封禁此人多长时间。"}-封禁长度 </div>
                     </td>
                     <td>
                         <div align="left">
@@ -165,12 +165,12 @@
                 <tr>
                     <td valign="top" width="35%">
                         <div class="rowdesc">
-                            -{help_icon title="上传Demo" message="Click here to upload a demo with this ban submission."}-上传Demo
+                            -{help_icon title="上传Demo" message="点击上传与此封禁提交的Demo"}-上传Demo
                         </div>
                     </td>
                     <td>
                         <div align="left">
-                            -{sb_button text="Upload a Demo" onclick="childWindow=open('pages/admin.uploaddemo.php','upload','resizable=no,width=300,height=130');" class="save" id="uploaddemo" submit=false}-
+                            -{sb_button text="上传一个Demo" onclick="childWindow=open('pages/admin.uploaddemo.php','upload','resizable=no,width=300,height=130');" class="save" id="uploaddemo" submit=false}-
                         </div>
                         <div id="demo.msg" style="color:#CC0000;">
                             -{$ban_demo}-
@@ -182,7 +182,7 @@
                     <td>
                         <input type="hidden" name="did" id="did" value="" />
                         <input type="hidden" name="dname" id="dname" value="" />
-                        -{sb_button text="Save Changes" class="ok" id="editban" submit=true}-
+                        -{sb_button text="保存更改" class="ok" id="editban" submit=true}-
                         -{sb_button text="返回" onclick="history.go(-1)" class="cancel" id="back" submit=false}-
                     </td>
                 </tr>
@@ -192,7 +192,7 @@
                 var dname = "";
                 function demo(id, name)
                 {
-                    $('demo.msg').setHTML("Uploaded: <b>" + name + "</b>");
+                    $('demo.msg').setHTML("已上传: <b>" + name + "</b>");
                     $('did').value = id;
                     $('dname').value = name;
                 }

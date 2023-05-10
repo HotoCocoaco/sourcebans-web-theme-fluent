@@ -61,7 +61,7 @@
 
                 <div class="margin-bottom:half">
                     <label for="BanReason" class="form-label form-label:bottom">
-                        Comments <span class="mandatory">*</span> (Please write down a
+                        评论 <span class="mandatory">*</span> (Please write down a
                         descriptive comment. So NO comments like: "hacking")
                     </label>
                     <textarea id="BanReason" name="BanReason" class="form-text form-full">{$ban_reason}</textarea>

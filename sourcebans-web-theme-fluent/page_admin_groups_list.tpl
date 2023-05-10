@@ -29,7 +29,7 @@
                     <tr>
                         <th class="text:left">Group Name</th>
                         <th class="text:left">Admins in group</th>
-                        <th>Action</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -54,7 +54,7 @@
                                 {if $permission_deletegroup}
                                     <button class="button button-important"
                                         onclick="RemoveGroup({$group.gid}, '{$group.name}', 'web');">
-                                        Delete
+                                        删除
                                     </button>
                                 {/if}
                             </td>
@@ -125,7 +125,7 @@
                     <tr>
                         <th class="text:left">Group Name</th>
                         <th class="text:left">Admins in group</th>
-                        <th>Action</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -149,7 +149,7 @@
 
                                 {if $permission_deletegroup}
                                     <button class="button button-important" onclick="RemoveGroup({$group.id}, '{$group.name}', 'srv');">
-                                        Delete
+                                        删除
                                     </button>
                                 {/if}
                             </td>
@@ -243,7 +243,7 @@
                     <tr>
                         <th class="text:left">Group Name</th>
                         <th class="text:left">Admins in group</th>
-                        <th>Action</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -268,7 +268,7 @@
                                 {if $permission_deletegroup}
                                     <button class="button button-important"
                                         onclick="RemoveGroup({$group.gid}, '{$group.name}', 'server');">
-                                        Delete
+                                        删除
                                     </button>
                                 {/if}
                             </td>
@@ -279,7 +279,7 @@
                                         <h3>Servers in this group</h3>
 
                                         <ul>
-                                            <li id="servers_{$group.gid}">Please Wait!</li>
+                                            <li id="servers_{$group.gid}">请等待!</li>
                                         </ul>
                                     </div>
                                 </div>

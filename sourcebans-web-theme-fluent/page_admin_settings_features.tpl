@@ -108,7 +108,7 @@
             <input type="checkbox" name="enable_publiccomments" class="form-check" id="enable_publiccomments" />
 
             <label for="enable_publiccomments" class="form-label form-label:left">
-                Enable Public Comments
+                Enable Public 评论
             </label>
 
             <div class="form-desc">
@@ -120,7 +120,7 @@
         </div>
 
         <div class="flex flex-ai:center flex-jc:space-between">
-            {sb_button text="Save Changes" class="button button-success" id="fsettings" submit=true}
+            {sb_button text="保存更改" class="button button-success" id="fsettings" submit=true}
             {sb_button text="返回" class="button button-light" id="fback"}
         </div>
     </form>

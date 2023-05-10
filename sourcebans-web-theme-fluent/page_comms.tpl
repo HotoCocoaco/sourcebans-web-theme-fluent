@@ -36,7 +36,7 @@
                     <span class=right><b>{$com.added}</b></span> 	
                 </div>
                     {$com.commenttxt}
-                    {if $com.editname != ''}<br /><br /><i>Last edit {$com.edittime} by {$com.editname}</i>{/if}
+                    {if $com.editname != ''}<br /><br /><i>最后编辑于 {$com.edittime} by {$com.editname}</i>{/if}
                 </div>
             </div>
         {/foreach}
@@ -103,7 +103,7 @@
                         {$ban.admin|escape:'html'}
                       </span>
                     {else}
-                      <span class="text:italic">Admin deleted</span>
+                      <span class="text:italic">管理员已删除</span>
                     {/if}
                   </td>
                 {/if}
@@ -177,7 +177,7 @@
                           {/if}
                         </li>
                         <li>
-                          <span><i class="fas fa-play"></i> Invoked on</span>
+                          <span><i class="fas fa-play"></i> 调用于</span>
                           <span>{$ban.ban_date}</span>
                         </li>
                         <li>
@@ -197,7 +197,7 @@
                             <span><i class="fas fa-user-shield"></i> Unblocked by Admin</span>
 
                             {if empty($ban.removedby)}
-                              <span class="text:italic">Admin deleted</span>
+                              <span class="text:italic">管理员已删除</span>
                             {else}
                               <span>{$ban.removedby|escape:'html'}</span>
                             {/if}
@@ -225,7 +225,7 @@
                             <span><i class="fas fa-ban"></i> Blocked by Admin</span>
 
                             {if empty($ban.admin)}
-                              <span class="text:italic">Admin deleted</span>
+                              <span class="text:italic">管理员已删除</span>
                             {else}
                               <span>{$ban.admin|escape:'html'}</span>
                             {/if}
@@ -237,7 +237,7 @@
 											{if $ban.server_id == 0}
 											Web Ban
 											{else}
-											Please Wait...
+											请等待...
 											{/if}</span>
                                                     </li>
                         <li>
@@ -255,7 +255,7 @@
                       {if $view_comments}
                         <div class="ban_list_comments margin-left">
                           <div class="layout_box_title">
-                            <h2>Comments</h2>
+                            <h2>评论</h2>
                           </div>
                           {if $ban.commentdata != "None"}
                             <ul>
@@ -266,7 +266,7 @@
                                       {if !empty($commenta.comname)}
                                         <span class="text:bold">{$commenta.comname|escape:'html'}</span>
                                       {else}
-                                        <span class="text:italic">Admin deleted</span>
+                                        <span class="text:italic">管理员已删除</span>
                                       {/if}
                                       <span>{$commenta.added}</span>
                                       {if $commenta.editcomlink != ""}
@@ -279,7 +279,7 @@
 
                                       {if !empty($commenta.edittime)}
                                         <span class="margin-top:half text:italic">
-                                          <i class="fas fa-pencil-alt"></i> Last edit
+                                          <i class="fas fa-pencil-alt"></i> 最后编辑于
                                           {$commenta.edittime} by {$commenta.editname}
                                         </span>
                                       {/if}

@@ -13,12 +13,12 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-archive"></i> Ban Submissions Archive (<span id="subcountarchiv">{$submission_count_archiv}</span>)</h2>
+        <h2><i class="fas fa-archive"></i> 封禁申请存档 (<span id="subcountarchiv">{$submission_count_archiv}</span>)</h2>
     </div>
 
     <div class="padding">
         <div class="margin-bottom">
-            Click a player's nickname to view information about their submission.
+            单击玩家的昵称以查看有关其提交的信息。
         </div>
 
         <div class="pagination">
@@ -31,7 +31,7 @@
                     <tr>
                         <th class="text:left">昵称</th>
                         <th class="text:left">Steam ID</th>
-                        <th>Action</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -54,24 +54,24 @@
                                     {if $permissions_editsub}
                                         <button class="button button-success margin-right:half"
                                             onclick="RemoveSubmission({$sub.subid}, '{$sub.name|smarty_stripslashes}', '2');">
-                                            Restore
+                                            恢复
                                         </button>
                                     {/if}
 
                                     <a href="index.php?p=admin&c=bans&o=email&type=s&id={$sub.subid}" class="button button-primary margin-right:half">
-                                        Contact
+                                        联系
                                     </a>
 
                                     <button class="button button-important margin-right:half"
                                         onclick="xajax_SetupBan({$sub.subid});">
-                                        Ban
+                                        封禁
                                     </button>
                                 {/if}
 
                                 {if $permissions_editsub}
                                     <button class="button button-important margin-right:half"
                                         onclick="RemoveSubmission({$sub.subid}, '{$sub.name|smarty_stripslashes}', '0');">
-                                        Delete
+                                        删除
                                     </button>
                                 {/if}
                             </td>
@@ -82,9 +82,9 @@
                                 <div class="collapse_content">
                                     <div class="cMessage cMessage_warning margin" style="font-weight: bold">
                                         <p style="text-align:center">
-                                            <i class="fas fa-info-circle"></i> This {$sub.archive} by 
+                                            <i class="fas fa-info-circle"></i> 此 {$sub.archive} 由 
                                                 {if empty($sub.archivedby)}
-                                                    <span class="text:italic">Admin deleted</span>
+                                                    <span class="text:italic">管理员已删除</span>
                                                 {else}
                                                     <span>{$sub.archivedby}</span>
                                                 {/if}
@@ -102,14 +102,14 @@
 
                                         <ul class="ban_list_detal">
                                             <li>
-                                                <span><i class="fa-solid fa-user"></i> Player</span>
+                                                <span><i class="fa-solid fa-user"></i> 玩家</span>
                                                 <span>
                                                     {$sub.name}
                                                 </span>
                                             </li>
 
                                             <li>
-                                                <span><i class="fa-solid fa-play"></i> Submitted</span>
+                                                <span><i class="fa-solid fa-play"></i> 已提交</span>
                                                 <span>
                                                     {$sub.submitted}
                                                 </span>
@@ -118,16 +118,16 @@
                                             <li>
                                                 <span><i class="fa-brands fa-steam"></i> Steam ID</span>
                                                 {if $sub.SteamId == ""}
-                                                    <span class="text:italic">No steamid present</span>
+                                                    <span class="text:italic">未找到steamid</span>
                                                 {else}
                                                     <a href="https://www.steamidfinder.com/lookup/{$sub.SteamId}" target="_blank" rel="noopener">{$sub.SteamId}</a>
                                                 {/if}
                                             </li>
 
                                             <li>
-                                                <span><i class="fa-solid fa-network-wired"></i> IP address</span>
+                                                <span><i class="fa-solid fa-network-wired"></i> IP地址</span>
                                                 {if $sub.sip == ""}
-                                                    <span class="text:italic">No IP address present</span>
+                                                    <span class="text:italic">未找到IP地址</span>
                                                 {else}
                                                     <a href="http://geoiplookup.net/ip/{$sub.sip}" target="_blank" rel="noopener">{$sub.sip}</a>
                                                 {/if}
@@ -137,7 +137,7 @@
                                                 <span><i class="fa-solid fa-server"></i> 服务器</span>
                                                 <div id="suba{$sub.subid}">
                                                     {if $sub.hostname == ""}
-                                                        <span class="text:italic">Retrieving Hostname</span>
+                                                        <span class="text:italic">获取主机名</span>
                                                     {else}
                                                         <span>{$sub.hostname}</span>
                                                     {/if}
@@ -150,16 +150,16 @@
                                             </li>
 
                                             <li>
-                                                <span><i class="fa-solid fa-user"></i> Submitter Name</span>
+                                                <span><i class="fa-solid fa-user"></i> 提交者名字</span>
                                                 {if $sub.subname == ""}
-                                                    <span class="text:italic">No name present</span>
+                                                    <span class="text:italic">未找到名字</span>
                                                 {else}
                                                     <span>{$sub.subname}</span>
                                                 {/if}
                                             </li>
 
                                             <li>
-                                                <span><i class="fa-solid fa-network-wired"></i> Submitter IP</span>
+                                                <span><i class="fa-solid fa-network-wired"></i> 提交者IP</span>
                                                 <a href="http://geoiplookup.net/ip/{$sub.ip}" target="_blank" rel="noopener">{$sub.ip}</a>
                                             </li>
                                         </ul>
@@ -167,7 +167,7 @@
 
                                     <div class="ban_list_comments margin-bottom">
                                         <div class="layout_box_title">
-                                            <h2><i class="fa-solid fa-pen-to-square"></i> Reason</h2>
+                                            <h2><i class="fa-solid fa-pen-to-square"></i> 原因</h2>
                                         </div>
 
                                         <div class="layout_box-child padding margin:half">
@@ -179,7 +179,7 @@
 
                                     <div class="ban_list_comments">
                                         <div class="layout_box_title">
-                                            <h2><i class="fa-regular fa-comments"></i> Comments</h2>
+                                            <h2><i class="fa-regular fa-comments"></i> 评论</h2>
                                         </div>
 
                                         {if $sub.commentdata != "None"}
@@ -191,7 +191,7 @@
                                                                 {if !empty($commenta.comname)}
                                                                     <span class="text:bold">{$commenta.comname|escape:'html'}</span>
                                                                 {else}
-                                                                    <span class="text:italic">Admin deleted</span>
+                                                                    <span class="text:italic">管理员已删除</span>
                                                                 {/if}
                                                                 <span>{$commenta.added}</span>
                                                                 {if $commenta.editcomlink != ""}
@@ -204,8 +204,8 @@
 
                                                                 {if !empty($commenta.edittime)}
                                                                     <span class="margin-top:half text:italic">
-                                                                        <i class="fas fa-pencil-alt"></i> Last edit
-                                                                        {$commenta.edittime} by {$commenta.editname}
+                                                                        <i class="fas fa-pencil-alt"></i> 最后编辑于
+                                                                        {$commenta.edittime} 由 {$commenta.editname}
                                                                     </span>
                                                                 {/if}
                                                             </div>

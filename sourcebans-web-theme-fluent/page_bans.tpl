@@ -36,7 +36,7 @@
                     <span class=right><b>{$com.added}</b></span> 	
                 </div>
                     {$com.commenttxt}
-                    {if $com.editname != ''}<br /><br /><i>Last edit {$com.edittime} by {$com.editname}</i>{/if}
+                    {if $com.editname != ''}<br /><br /><i>最后编辑于 {$com.edittime} by {$com.editname}</i>{/if}
                 </div>
             </div>
         {/foreach}
@@ -107,7 +107,7 @@
                                     {if !empty($ban.admin)}
                                         <td>{$ban.admin|escape:'html'}</td>
                                     {else}
-                                        <td class="text:italic">Admin deleted</td>
+                                        <td class="text:italic">管理员已删除</td>
                                     {/if}
                                 {/if}
                             <td class="{$ban.class}">{$ban.banlength}</td>
@@ -188,16 +188,16 @@
                                                     {/if}
                                                     {if !$hideplayerips}
                                                         <li>
-                                                            <span><i class="fas fa-network-wired"></i> IP address</span>
+                                                            <span><i class="fas fa-network-wired"></i> IP地址</span>
                                                             {if $ban.ip == "none"}
-                                                                <span class="text:italic">No IP address present</span>
+                                                                <span class="text:italic">未找到IP地址</span>
                                                             {else}
                                                                 <span>{$ban.ip}</span>
                                                             {/if}
                                                         </li>
                                                     {/if}
                                                         <li>
-                                                            <span><i class="fas fa-play"></i> Invoked on</span>
+                                                            <span><i class="fas fa-play"></i> 调用于</span>
                                                             <span>{$ban.ban_date}</span>
                                                         </li>
                                                         <li>
@@ -216,7 +216,7 @@
                                                         <li>
                                                             <span><i class="fas fa-user-shield"></i> Unbanned by Admin</span>
                                                             {if empty($ban.removedby)}
-                                                                <span class="text:italic">Admin deleted</span>
+                                                                <span class="text:italic">管理员已删除</span>
                                                             {else}
                                                                 <span>{$ban.removedby|escape:'html'}</span>
                                                             {/if}
@@ -236,11 +236,11 @@
                                                     </li>
                                                     {if !$hideadminname}
                                                         <li>
-                                                            <span><i class="fas fa-ban"></i> Banned by Admin</span>
+                                                            <span><i class="fas fa-ban"></i> 被管理员封禁</span>
                                                             {if !empty($ban.admin)}
                                                                 <span>{$ban.admin|escape:'html'}</span>
                                                             {else}
-                                                                <span class="text:italic">Admin deleted</span>
+                                                                <span class="text:italic">管理员已删除</span>
                                                             {/if}
                                                         </li>
                                                     {/if}
@@ -249,12 +249,12 @@
                                                         <span>{$ban.prevoff_link}</span>
                                                     </li>
 			    		                            <li>
-                                                        <span><i class="fas fa-server"></i> Banned from </span>
+                                                        <span><i class="fas fa-server"></i> 封禁于 </span>
                                                             <span {if $ban.server_id != 0} id="host_{$ban.ban_id}"{/if}>
                                                                 {if $ban.server_id == 0}
                                                                 Web Ban
                                                                 {else}
-                                                                Please Wait...
+                                                                请等待...
                                                                 {/if}
                                                             </span>
                                                     </li>
@@ -270,7 +270,7 @@
                                                 {if $view_comments}
                                                     <ul class="ban_list_comments margin-left responsive_show:desktop">
                                                         <div class="layout_box_title">
-                                                            <h2><i class="fa-solid fa-comments"></i> Comments</h2>
+                                                            <h2><i class="fa-solid fa-comments"></i> 评论</h2>
                                                         </div>
                                                         {if $ban.commentdata != "None"}
                                                             <ul>
@@ -281,7 +281,7 @@
                                                                                 {if !empty($commenta.comname)}
                                                                                     <span class="text:bold">{$commenta.comname|escape:'html'}</span>
                                                                                 {else}
-                                                                                    <span class="text:italic">Admin deleted</span>
+                                                                                    <span class="text:italic">管理员已删除</span>
                                                                                 {/if}
                                                                                 <span>{$commenta.added}</span>
                                                                                 {if $commenta.editcomlink != ""}
@@ -292,8 +292,8 @@
                                                                                 {$commenta.commenttxt}
                                                                                 {if !empty($commenta.edittime)}
                                                                                     <span class="margin-top:half text:italic">
-                                                                                        <i class="fas fa-pencil-alt"></i> Last edit
-                                                                                        {$commenta.edittime} by {if !empty($commenta.editname)}{$commenta.editname}{else}<i>Admin deleted</i>{/if}
+                                                                                        <i class="fas fa-pencil-alt"></i> 最后编辑于
+                                                                                        {$commenta.edittime} by {if !empty($commenta.editname)}{$commenta.editname}{else}<i>管理员已删除</i>{/if}
                                                                                     </span>
                                                                                 {/if}
                                                                             </div>
@@ -324,12 +324,12 @@
                 <div>
                     <button onclick="TickSelectAll();return false;" title="选择全部" name="tickswitchlink" id="tickswitchlink" class="button button:line button-light margin-right:half">选择全部</button>
                     <select name="bulk_action" id="bulk_action" onchange="BulkEdit(this,'{$admin_postkey}');" class="form-select">
-                        <option value="-1">Action</option>
+                        <option value="-1">操作</option>
                         {if $general_unban}
                             <option value="U">Unban</option>
                         {/if}
                         {if $can_delete}
-                            <option value="D">Delete</option>
+                            <option value="D">删除</option>
                         {/if}
                     </select>
                 </div>

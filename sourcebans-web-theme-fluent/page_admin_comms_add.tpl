@@ -13,14 +13,14 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-microphone-alt-slash"></i> Add Block</h2>
+        <h2><i class="fas fa-microphone-alt-slash"></i> 增加阻挡</h2>
     </div>
 
     <div class="padding">
         <div id="msg-green" class="message message:succes margin-bottom:half" style="display: none;">
-            <h3>Block Added</h3>
-            <div>新管理员已成功添加到系统中。</div>
-            <div class="text:italic">Redirecting back to comms page</div>
+            <h3>已增加阻挡</h3>
+            <div>新信息已成功添加到系统中。</div>
+            <div class="text:italic">重定向到交流页面</div>
         </div>
 
         <div class="margin-bottom">
@@ -36,7 +36,7 @@
             <input type="text" TABINDEX=1 class="form-input form-full" id="nickname" name="nickname" />
 
             <div class="form-desc">
-                Type the nickname of the person that you are banning.
+                键入您要禁止的人的昵称。
             </div>
             <div id="nick.msg" class="message message:error margin-top:half" style="display: none;"></div>
         </div>
@@ -49,39 +49,39 @@
             <input type="text" TABINDEX=3 class="form-input form-full" id="steam" name="steam" />
 
             <div class="form-desc">
-                The Steam ID or Community ID of the person to ban.
+                要禁止的人的Steam ID或社区ID。
             </div>
             <div id="steam.msg" class="message message:error margin-top:half" style="display: none;"></div>
         </div>
 
         <div class="margin-bottom:half">
             <label for="type" class="form-label form-label:bottom">
-                Block Type
+                阻挡类型
             </label>
 
             <select id="type" name="type" TABINDEX=2 class="form-select form-full">
-                <option value="1">Voice</option>
-                <option value="2">Chat</option>
-                <option value="3">Chat &amp; Voice</option>
+                <option value="1">语音</option>
+                <option value="2">聊天</option>
+                <option value="3">聊天 &amp; 语音</option>
             </select>
         </div>
 
         <div class="margin-bottom:half">
             <label for="listReason" class="form-label form-label:bottom">
-                Block Reason
+                阻挡原因
             </label>
 
             <select id="listReason" name="listReason" TABINDEX=4 class="form-select form-full"
                 onChange="changeReason(this[this.selectedIndex].value);">
                 <option value="" selected> -- 选择原因 -- </option>
                 <optgroup label="Violation">
-                    <option value="Obscene language">Obscene language</option>
-                    <option value="Insult players">Insult players</option>
-                    <option value="Admin disrespect">Admin disrespect</option>
+                    <option value="污言秽语">污言秽语</option>
+                    <option value="辱骂玩家">辱骂玩家</option>
+                    <option value="不尊重管理员">不尊重管理员</option>
                     <option value="不适宜言语">不适宜言语</option>
-                    <option value="Trading">Trading</option>
-                    <option value="Spam in chat/voice">Spam</option>
-                    <option value="Advertisement">Advertisement</option>
+                    <option value="交易">交易</option>
+                    <option value="聊天/语音刷屏">刷屏</option>
+                    <option value="广告">广告</option>
                 </optgroup>
                 <option value="other">其他原因</option>
             </select>
@@ -92,14 +92,14 @@
             </div>
 
             <div class="form-desc">
-                Explain in detail, why this block is being made.
+                详细解释为什么要制作这个阻挡。
             </div>
             <div id="reason.msg" class="message message:error margin-top:half" style="display: none;"></div>
         </div>
 
         <div class="margin-bottom:half">
             <label for="banlength" class="form-label form-label:bottom">
-                Block Length
+                阻挡时长
             </label>
 
             <select id="banlength" TABINDEX=5 class="form-select form-full">
@@ -146,7 +146,7 @@
         </div>
 
         <div class="flex flex-ai:center flex-jc:space-between margin-top">
-            {sb_button text="Add block" onclick="ProcessBan();" class="button button-success" id="aban" submit=false}
+            {sb_button text="增加阻挡" onclick="ProcessBan();" class="button button-success" id="aban" submit=false}
             {sb_button text="返回" onclick="history.go(-1)" class="button button-light" id="aback"}
         </div>
     </div>

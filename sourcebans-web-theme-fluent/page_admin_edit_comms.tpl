@@ -18,7 +18,7 @@
                 <tr>
                     <td valign="top" width="35%">
                         <div class="rowdesc">
-                            -{help_icon title="Player name" message="This is the name of the player that was blocked."}-Player name
+                            -{help_icon title="玩家姓名" message="This is the name of the player that was blocked."}-玩家姓名
                         </div>
                     </td>
                     <td>
@@ -66,13 +66,13 @@
                             <select id="listReason" name="listReason" TABINDEX=4 class="submit-fields" onChange="changeReason(this[this.selectedIndex].value);">
                                 <option value="" selected> -- 选择原因 -- </option>
                                 <optgroup label="行为">
-                                    <option value="Obscene language">Obscene language</option>
-                                    <option value="Insult players">Insult players</option>
-                                    <option value="Admin disrespect">Admin disrespect</option>
+                                    <option value="污言秽语">污言秽语</option>
+                                    <option value="辱骂玩家">辱骂玩家</option>
+                                    <option value="不尊重管理员">不尊重管理员</option>
                                     <option value="不适宜言语">不适宜言语</option>
-                                    <option value="Trading">Trading</option>
+                                    <option value="交易">交易</option>
                                     <option value="Spam in chat/voice">Spam</option>
-                                    <option value="Advertisement">Advertisement</option>
+                                    <option value="广告">广告</option>
                                 </optgroup>
                                	    <option value="other">Custom</option>
                            </select>
@@ -138,7 +138,7 @@
                         <input type="hidden" name="did" id="did" value="" />
                         <input type="hidden" name="dname" id="dname" value="" />
 						&nbsp;
-                        -{sb_button text="Save Changes" class="ok" id="editban" submit=true}-
+                        -{sb_button text="保存更改" class="ok" id="editban" submit=true}-
                         -{sb_button text="返回" onclick="history.go(-1)" class="cancel" id="back" submit=false}-
                     </td>
                 </tr>

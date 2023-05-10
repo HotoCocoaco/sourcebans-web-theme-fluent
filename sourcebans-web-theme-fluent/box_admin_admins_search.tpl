@@ -141,7 +141,7 @@
 
                     <select class="form-select form-full" id="server" onmouseup="$('admin_on_').checked = true">
                       {foreach from=$server_list item="server"}
-                      <option value="{$server.sid}" id="ss{$server.sid}">Retrieving Hostname...
+                      <option value="{$server.sid}" id="ss{$server.sid}">获取主机名...
                         ({$server.ip}:{$server.port})</option>
                       {/foreach}
                     </select>

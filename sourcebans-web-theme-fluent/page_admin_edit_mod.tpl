@@ -85,7 +85,7 @@
         </div>
 
         <div class="flex flex-ai:center flex-jc:space-between">
-            {sb_button text="Save Changes" class="button button-success" id="editmod" submit=true}
+            {sb_button text="保存更改" class="button button-success" id="editmod" submit=true}
             {sb_button text="返回" onclick="history.go(-1)" class="button button-light" id="back" submit=false}
         </div>
     </form>

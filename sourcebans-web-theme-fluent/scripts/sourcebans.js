@@ -293,7 +293,7 @@ function RemoveServer(id, name) {
 function RemoveBan(id, key, page, name, confirm, bulk) {
   if (confirm == 0) {
     ShowBox(
-      'Delete Ban',
+      '删除 Ban',
       'Are you sure you want to delete the ban' +
         (bulk == 'true' ? 's' : '') +
         ' for ' +
@@ -489,7 +489,7 @@ function update_web() {
     document.getElementById('webg').value == 'c' ||
     document.getElementById('webg').value == 'n'
   ) {
-    $('web.msg').setHTML('Please Wait...');
+    $('web.msg').setHTML('请等待...');
     $('web.msg').setStyle('display', 'block');
   }
 
@@ -513,7 +513,7 @@ function update_server_groups() {
   $('nsgroup').setHTML('');
 
   if (document.getElementById('serverg').value == 'n') {
-    $('group.msg').setHTML('Please Wait...');
+    $('group.msg').setHTML('请等待...');
     $('group.msg').setStyle('display', 'block');
     var height = 50;
     Shrink('nsgroup', 500, height);
@@ -718,7 +718,7 @@ function update_server() {
     document.getElementById('serverg').value == 'c' ||
     document.getElementById('serverg').value == 'n'
   ) {
-    $('server.msg').setHTML('Please Wait...');
+    $('server.msg').setHTML('请等待...');
     $('server.msg').setStyle('display', 'block');
   }
 
@@ -1077,7 +1077,7 @@ function UpdateGroupPermissionCheckBoxes() {
     document.getElementById('grouptype').value != 3 &&
     document.getElementById('grouptype').value != 0
   ) {
-    $('type.msg').setHTML('Please Wait...');
+    $('type.msg').setHTML('请等待...');
     $('type.msg').setStyle('display', 'block');
   }
   if (document.getElementById('grouptype').value == 1) {
@@ -1201,7 +1201,7 @@ function BulkEdit(action, bankey) {
       UnbanBan(ids, bankey, '', 'Bulk Unban', '1', 'true');
       break;
     case 'D':
-      RemoveBan(ids, bankey, '', 'Bulk Delete', '0', 'true');
+      RemoveBan(ids, bankey, '', 'Bulk 删除', '0', 'true');
       break;
   }
 }
@@ -1324,7 +1324,7 @@ function addslashes(str) {
 function RemoveBlock(id, key, page, name, confirm) {
   if (confirm == 0) {
     ShowBox(
-      'Delete Block',
+      '删除 Block',
       'Are you sure you want to delete the block for ' + name + '?',
       'blue',
       '',

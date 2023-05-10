@@ -435,7 +435,7 @@
     </div>
 
     <div class="padding flex flex-ai:center flex-jc:space-between">
-        {sb_button text="Save Changes" class="button button-success" id="asettings" submit=true}
+        {sb_button text="保存更改" class="button button-success" id="asettings" submit=true}
         {sb_button text="返回" class="button button-light" id="aback"}
     </div>
 </form>

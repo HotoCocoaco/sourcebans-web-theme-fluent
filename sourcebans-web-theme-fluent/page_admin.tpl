@@ -131,11 +131,11 @@
         </div>
         <div class="padding" align="right">
             <ul class="list-reset">
-                <li>Latest release: <span id='relver' class="text:bold">Please Wait...</span></li>
+                <li>Latest release: <span id='relver' class="text:bold">请等待...</span></li>
                 {if $dev}
-                    <li>Latest Git: <span id='svnrev' class="text:bold">Please Wait...</span></li>
+                    <li>Latest Git: <span id='svnrev' class="text:bold">请等待...</span></li>
                 {/if}
-                <li><span id='versionmsg'>Please Wait...</span></li>
+                <li><span id='versionmsg'>请等待...</span></li>
             </ul>
         </div>
     </div>

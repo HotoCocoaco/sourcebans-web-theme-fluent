@@ -28,7 +28,7 @@
                             <span title="SteamID Universe (X of STEAM_X:Y:Z)">SU</span>
                         </th>
                         {if $permission_editmods || $permission_deletemods}
-                            <th>Action</th>
+                            <th>操作</th>
                         {/if}
                     </tr>
                 </thead>
@@ -58,7 +58,7 @@
                                     {if $permission_deletemods}
                                         <button onclick="RemoveMod('{$mod.name|escape:'quotes'|smarty_htmlspecialchars}', '{$mod.mid}');"
                                             class="button button-light">
-                                            Delete
+                                            删除
                                         </button>
                                     {/if}
                                 </td>

@@ -44,7 +44,7 @@
 
   function SendRcon() {
     xajax_SendRcon('-{$id}-', $('cmd').value, true);
-    $('cmd').value = 'Executing, Please Wait...';
+    $('cmd').value = 'Executing, 请等待...';
     $('cmd').disabled = 'true';
     $('rcon_btn').disabled = 'true';
 

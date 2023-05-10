@@ -15,7 +15,7 @@
                             <th>Mod</th>
                             <th class="text:left">Hostname</th>
                             <th>Players</th>
-                            <th>Action</th>
+                            <th>操作</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -69,7 +69,7 @@
                                             <li>
                                                 <button class="button button-light"
                                                     onclick="RemoveServer({$server.sid}, '{$server.ip}:{$server.port}');">
-                                                    Delete
+                                                    删除
                                                 </button>
                                             </li>
                                         {/if}
