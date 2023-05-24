@@ -85,7 +85,7 @@
                 </tr>
                 <tr>
                     <td valign="top" width="35%">
-                        <div class="rowdesc">-{help_icon title="Block Length" message="Select how long you want to block this person for."}-封禁长度 </div>
+                        <div class="rowdesc">-{help_icon title="Block Length" message="Select how long you want to block this person for."}-封禁时长 </div>
                     </td>
                     <td>
                         <div align="left">

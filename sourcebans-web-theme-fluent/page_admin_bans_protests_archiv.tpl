@@ -18,7 +18,7 @@
 
     <div class="padding">
         <div class="margin-bottom">
-            单击玩家的昵称以查看有关其禁令的信息。
+            单击玩家的昵称以查看有关其封禁的信息。
         </div>
 
         <div class="pagination">

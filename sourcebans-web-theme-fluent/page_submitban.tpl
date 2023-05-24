@@ -37,7 +37,7 @@
 
                 <div class="margin-bottom:half">
                     <label for="SteamID" class="form-label form-label:bottom">
-                        Players Steam ID
+                        玩家 Steam ID
                     </label>
                     <input type="text" id="SteamID" name="SteamID" size="40" maxlength="64" value="{$STEAMID}"
                         class="form-input form-full" />
@@ -45,7 +45,7 @@
 
                 <div class="margin-bottom:half">
                     <label for="BanIP" class="form-label form-label:bottom">
-                        Players IP
+                        玩家 IP
                     </label>
                     <input type="text" id="BanIP" name="BanIP" size="40" maxlength="64" value="{$ban_ip}"
                         class="form-input form-full" />
@@ -53,7 +53,7 @@
 
                 <div class="margin-bottom:half">
                     <label for="PlayerName" class="form-label form-label:bottom">
-                        Players 昵称 <span class="mandatory">*</span>
+                        玩家昵称 <span class="mandatory">*</span>
                     </label>
                     <input type="text" id="PlayerName" size="40" maxlength="70" name="PlayerName" value="{$player_name}"
                         class="form-input form-full" />
@@ -61,15 +61,14 @@
 
                 <div class="margin-bottom:half">
                     <label for="BanReason" class="form-label form-label:bottom">
-                        评论 <span class="mandatory">*</span> (Please write down a
-                        descriptive comment. So NO comments like: "hacking")
+                        评论 <span class="mandatory">*</span> (请写下一个描述性的评论。所以不要评论:“开了”)
                     </label>
                     <textarea id="BanReason" name="BanReason" class="form-text form-full">{$ban_reason}</textarea>
                 </div>
 
                 <div class="margin-bottom:half">
                     <label for="SubmitName" class="form-label form-label:bottom">
-                        Your Name
+                        你的名字
                     </label>
                     <input type="text" id="SubmitName" size="40" maxlength="70" name="SubmitName"
                         value="{$subplayer_name}" class="form-input form-full" />
@@ -77,7 +76,7 @@
 
                 <div class="margin-bottom:half">
                     <label for="EmailAddr" class="form-label form-label:bottom">
-                        Your Email <span class="mandatory">*</span>
+                        你的电子邮件地址 <span class="mandatory">*</span>
                     </label>
                     <input type="text" id="EmailAddr" size="40" maxlength="70" name="EmailAddr" value="{$player_email}"
                         class="form-input form-full" />
@@ -88,23 +87,23 @@
                         服务器 <span class="mandatory">*</span>
                     </label>
                     <select id="server" name="server" class="form-select form-full">
-                        <option value="-1">-- Select 服务器 --</option>
+                        <option value="-1">-- 选择服务器 --</option>
                         {foreach from=$server_list item="server"}
                             <option value="{$server.sid}" {if $server_selected==$server.sid}selected{/if}>
                                 {$server.hostname}</option>
                         {/foreach}
-                        <option value="0">Other server / Not listed here</option>
+                        <option value="0">其他服务器/此处未列出</option>
                     </select>
                 </div>
 
                 <div class="margin-bottom:half">
                     <label for="demo_file" class="form-label form-label:bottom">
-                        Upload demo
+                        上传demo
                     </label>
 
                     <input name="demo_file" id="demo_file" type="file" size="25" class="form-file form-full" />
                     <div class="form-desc">
-                        Note: Only DEM, ZIP, RAR, 7Z, BZ2 or GZ allowed.
+                        注:只允许DEM, ZIP, RAR, 7Z, BZ2或GZ。
                     </div>
                 </div>
 
@@ -114,11 +113,11 @@
             </form>
 
             <div class="margin-top">
-                <h3>What happens if someone gets banned?</h3>
+                <h3>如果有人被封了会怎样?</h3>
                 <p>
-                    If someone you reported gets banned, the SteamID or IP will be included onto the ban on the main
-                    bans list and everytime they try to connect to any server they will be blocked from joining and
-                    it will be logged into our database.
+                    如果你举报的人被封禁，SteamID或IP将被列入主封禁名单，
+                    每次他们试图连接任何服务器时，他们将被阻止加入，
+                    并将被记录到我们的数据库中。
                 </p>
             </div>
         </div>

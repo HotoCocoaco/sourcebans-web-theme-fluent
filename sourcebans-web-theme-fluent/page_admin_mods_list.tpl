@@ -21,9 +21,9 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Mod icon</th>
-                        <th class="text:left">Name</th>
-                        <th class="text:left">Mod Folder</th>
+                        <th>Mod图标</th>
+                        <th class="text:left">名称</th>
+                        <th class="text:left">Mod文件夹</th>
                         <th>
                             <span title="SteamID Universe (X of STEAM_X:Y:Z)">SU</span>
                         </th>
@@ -52,7 +52,7 @@
                                     {if $permission_editmods}
                                         <a href="index.php?p=admin&c=mods&o=edit&id={$mod.mid}"
                                             class="button button-light margin-right:half">
-                                            Edit
+                                            编辑
                                         </a>
                                     {/if}
                                     {if $permission_deletemods}

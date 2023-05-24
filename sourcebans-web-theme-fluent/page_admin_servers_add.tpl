@@ -3,7 +3,7 @@
         拒绝访问
     {else}
         <div class="admin_tab_content_title">
-            <h2><i class="fas fa-plus"></i> 服务器 Details</h2>
+            <h2><i class="fas fa-plus"></i> 服务器详情</h2>
         </div>
 
         <div class="padding">
@@ -14,7 +14,7 @@
             <input type="hidden" name="insert_type" value="add">
             <div class="margin-bottom:half">
                 <label for="address" class="form-label form-label:bottom">
-                    服务器 IP/Domain
+                    服务器IP/域名
                 </label>
                 <input type="text" TABINDEX=1 class="form-input form-full" id="address" name="address" value="{$ip}" />
                 <div id="address.msg" class="message message:error margin-top:half" style="display: none;"></div>
@@ -22,7 +22,7 @@
 
             <div class="margin-bottom:half">
                 <label for="port" class="form-label form-label:bottom">
-                    服务器 Port
+                    服务器端口
                 </label>
                 <input type="text" TABINDEX=2 class="form-input form-full" id="port" name="port"
                     value="{if $port}{$port}{else}27015{/if}" />
@@ -31,7 +31,7 @@
 
             <div class="margin-bottom:half">
                 <label for="rcon" class="form-label form-label:bottom">
-                    RCON Password
+                    RCON密码
                 </label>
                 <input type="password" TABINDEX=3 class="form-input form-full" id="rcon" name="rcon" value="{$rcon}" />
                 <div id="rcon.msg" class="message message:error margin-top:half" style="display: none;"></div>
@@ -39,7 +39,7 @@
 
             <div class="margin-bottom:half">
                 <label for="rcon2" class="form-label form-label:bottom">
-                    RCON Password (Confirm)
+                    RCON密码（确认）
                 </label>
                 <input type="password" TABINDEX=4 class="form-input form-full" id="rcon2" name="rcon2" value="{$rcon}" />
                 <div id="rcon2.msg" class="message message:error margin-top:half" style="display: none;"></div>
@@ -64,7 +64,7 @@
 
             <div class="margin-bottom:half">
                 <label for="enabled" class="form-label form-label:bottom">
-                    Enabled
+                    启用
                 </label>
                 <input type="checkbox" id="enabled" class="form-check" name="enabled" checked="checked" />
                 <div id="enabled.msg" class="message message:error margin-top:half" style="display: none;"></div>
@@ -73,7 +73,7 @@
             {if $grouplist}
                 <div class="margin-bottom:half">
                     <label class="form-label form-label:bottom">
-                        服务器 Groups
+                        服务器组
                     </label>
 
                     <ul class="form_ul margin-top">

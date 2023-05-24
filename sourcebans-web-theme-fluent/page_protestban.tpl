@@ -1,18 +1,16 @@
 <div class="flex flex-jc:center flex-ai:center">
     <div class="layout_box layout_box_medium">
         <div class="layout_box_title">
-            <h2><i class="fas fa-user-clock"></i> Appeal a Ban</h2>
+            <h2><i class="fas fa-user-clock"></i> 发起一个申诉</h2>
         </div>
 
         <div class="padding">
             <div>
-                In order to appeal a ban, you must make sure you are banned via clicking <a href="index.php?p=banlist"
-                    class="text:bold">here</a> to see if you are banned and for what
-                reason.
+                为了申诉一次封禁，你必须确保你点击 <a href="index.php?p=banlist"
+                    class="text:bold">这里</a> 确认你是被封的和其原因。
             </div>
             <div class="margin-bottom">
-                If you are indeed on our ban list and you feel it is unjust or any other circumstances, please fill
-                out the appeal format below.
+                假如你被封了但是你认为不公正或者有其他情况，请填写以下表格。
             </div>
 
             <form action="index.php?p=protest" method="post">
@@ -31,7 +29,7 @@
 
                 <div id="steam.row" class="margin-bottom:half">
                     <label for="SteamID" class="form-label form-label:bottom">
-                        Your SteamID <span class="mandatory">*</span>
+                        你的 SteamID <span class="mandatory">*</span>
                     </label>
                     <input type="text" id="SteamID" name="SteamID" size="40" maxlength="64" value="{$steam_id}"
                         class="form-input form-full" />
@@ -39,7 +37,7 @@
 
                 <div id="ip.row" class="margin-bottom:half" style="display: none;">
                     <label for="Ip" class="form-label form-label:bottom">
-                        Your IP
+                        你的 IP
                     </label>
                     <input type="text" id="Ip" name="IP" size="40" maxlength="64" value="{$ip}"
                         class="form-input form-full" />
@@ -47,7 +45,7 @@
 
                 <div class="margin-bottom:half">
                     <label for="PlayerName" class="form-label form-label:bottom">
-                        Name <span class="mandatory">*</span>
+                        名称 <span class="mandatory">*</span>
                     </label>
                     <input type="text" id="PlayerName" size="40" maxlength="70" name="PlayerName" value="{$player_name}"
                         class="form-input form-full" />
@@ -55,8 +53,7 @@
 
                 <div class="margin-bottom:half">
                     <label for="BanReason" class="form-label form-label:bottom">
-                        Reason why you should be unbanned <span class="mandatory">*</span>: (Be as descriptive
-                        as possible)
+                        为什么你应该被解封 <span class="mandatory">*</span>: (尽可能详细)
                     </label>
                     <textarea id="BanReason" name="BanReason" cols="30" rows="5"
                         class="form-text form-full input">{$reason}</textarea>
@@ -64,7 +61,7 @@
 
                 <div class="margin-bottom:half">
                     <label for="EmailAddr" class="form-label form-label:bottom">
-                        Your Email <span class="mandatory">*</span>
+                        你的电子邮件地址 <span class="mandatory">*</span>
                     </label>
                     <input type="text" id="EmailAddr" size="40" maxlength="70" name="EmailAddr" value="{$player_email}"
                         class="form-input form-full" />
@@ -76,16 +73,15 @@
             </form>
 
             <div class="margin-top">
-                <h3>What happens after I post my appeal?</h3>
+                <h3>我提交这个申诉会发生什么？</h3>
                 <p>
-                    The staff team will be notified of your appeal. They will then review if the ban is conclusive.
-                    After reviewing you will get a reply, which usally means within 24 hours.
+                    您的上诉将通知员工团队。然后，他们将审查封禁是否具有决定性。
+                    审核后，您将得到回复，通常是指在24小时内回复。
                 </p>
 
-                <h3>Note:</h3>
+                <h3>注意:</h3>
                 <p>
-                    Sending emails with threats to our admins, scolding or shouting will not get you unbanned and you
-                    will be permanently denied from using any of our services.
+                    向我们的管理员发送带有威胁、斥责或大喊大叫的电子邮件不会让您失去联系，您将被永久拒绝使用我们的任何服务。
                 </p>
             </div>
         </div>

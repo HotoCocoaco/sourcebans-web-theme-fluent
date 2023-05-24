@@ -115,7 +115,7 @@
                 </tr>
                 <tr>
                     <td valign="top" width="35%">
-                        <div class="rowdesc">-{help_icon title="封禁长度" message="选择你想封禁此人多长时间。"}-封禁长度 </div>
+                        <div class="rowdesc">-{help_icon title="封禁时长" message="选择你想封禁此人多长时间。"}-封禁时长 </div>
                     </td>
                     <td>
                         <div align="left">

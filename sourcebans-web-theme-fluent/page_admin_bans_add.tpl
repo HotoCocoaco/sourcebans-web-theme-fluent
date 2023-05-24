@@ -109,7 +109,7 @@
 
         <div class="margin-bottom:half">
             <label for="banlength" class="form-label form-label:bottom">
-                封禁长度
+                封禁时长
             </label>
 
             <select id="banlength" TABINDEX=5 class="form-select form-full">

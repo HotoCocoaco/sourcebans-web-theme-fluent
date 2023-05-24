@@ -14,7 +14,7 @@
         </section>
     {else}
         <div class="admin_tab_content_title">
-            <h2><i class="fas fa-cogs"></i> Overrides</h2>
+            <h2><i class="fas fa-cogs"></i> 覆盖</h2>
         </div>
 
         <div class="padding">
@@ -25,22 +25,22 @@
             {/if}
             {if $overrides_save_success}
                 <script type="text/javascript">
-                    ShowBox("Overrides updated", "The changes have been saved successfully.", "green",
+                    ShowBox("覆盖已更新", "更改保存成功。", "green",
                         "index.php?p=admin&c=admins");
                 </script>
             {/if}
 
             <div>
-                With Overrides you can change the flags or permissions on any command, either globally, or for a specific
-                group, without editing plugin source code.
+                使用覆盖，您可以全局地或针对特定的
+                组，不编辑插件源代码。
             </div>
             <div>
-                Read about: <a href="http://wiki.alliedmods.net/Overriding_Command_Access_%28SourceMod%29"
+                阅读: <a href="http://wiki.alliedmods.net/Overriding_Command_Access_%28SourceMod%29"
                     title="Overriding Command Access (SourceMod)" target="_blank" class="text:bold text:italic"
                     rel="noopener">overriding command
-                    access</a> in the AlliedModders Wiki!
+                    access</a> 在 AlliedModders Wiki!
             </div>
-            <p class="text:italic">Blanking out an overrides' name will delete it.</p>
+            <p class="text:italic">在覆盖的名称上留空将进行删除</p>
 
             <form action="" method="post">
                 <div class="table table_box">
@@ -48,8 +48,8 @@
                         <thead>
                             <tr>
                                 <th>类型</th>
-                                <th>Name</th>
-                                <th>Flags</th>
+                                <th>名字</th>
+                                <th>标记</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -58,9 +58,9 @@
                                     <td>
                                         <select class="form-select form-full" name="override_type[]">
                                             <option{if $override.type == "command"} selected="selected" {/if} value="command">
-                                                Command</option>
+                                                命令</option>
                                                 <option{if $override.type == "group"} selected="selected" {/if} value="group">
-                                                    Group</option>
+                                                    组</option>
                                         </select>
                                         <input type="hidden" name="override_id[]" value="{$override.id}" />
                                     </td>
@@ -77,8 +77,8 @@
                             <tr>
                                 <td>
                                     <select class="form-select form-full" name="new_override_type">
-                                        <option value="command">Command</option>
-                                        <option value="group">Group</option>
+                                        <option value="command">命令</option>
+                                        <option value="group">组</option>
                                     </select>
                                 </td>
                                 <td>
@@ -95,10 +95,10 @@
                 <div class="flex flex-ai:center flex-jc:space-between margin-top">
                     <button type="submit" name="oversave" class="button button-success"
                         onmouseover="ButtonOver(&quot;oversave&quot;)" onmouseout="ButtonOver(&quot;oversave&quot;)"
-                        id="oversave">Save</button>
+                        id="oversave">保存</button>
                     <button onclick="history.go(-1)" name="oback" class="button button-light"
                         onmouseover="ButtonOver(&quot;oback&quot;)" onmouseout="ButtonOver(&quot;oback&quot;)"
-                        id="oback">Back</button>
+                        id="oback">返回</button>
                 </div>
             </form>
         </div>

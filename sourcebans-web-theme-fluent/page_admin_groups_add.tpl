@@ -19,20 +19,20 @@
     <div class="padding">
         <div class="margin-bottom:half">
             <label for="groupname" class="form-label form-label:bottom">
-                Group Name
+                组名称
             </label>
 
             <input type="text" TABINDEX=1 class="form-input form-full" id="groupname" name="groupname" />
 
             <div class="form-desc">
-                Type the name of the new group you want to create.
+                键入要创建的新组的名称。
             </div>
             <div id="name.msg" class="message message:error margin-top:half" style="display: none;"></div>
         </div>
 
         <div class="margin-bottom:half">
             <label for="grouptype" class="form-label form-label:bottom">
-                Group Type
+                组类型
             </label>
 
             <select onchange="UpdateGroupPermissionCheckBoxes()" TABINDEX=2 class="form-select form-full" name="grouptype"
@@ -44,7 +44,7 @@
             </select>
 
             <div class="form-desc">
-                This defines the type of group you are about to create. This helps identify and catagorize the groups list.
+                这定义了要创建的组的类型。这有助于识别和分类组列表。
             </div>
             <div id="type.msg" class="message message:info margin-top:half" style="display: none;"></div>
 

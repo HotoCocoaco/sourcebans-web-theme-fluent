@@ -143,7 +143,7 @@
 
                                                 <select class="form-select form-full" id="server"
                                                     onmouseup="$('where_banned').checked = true">
-                                                    <option label="Web Ban" value="0">Web Ban</option>
+                                                    <option label="网页封禁" value="0">网页封禁</option>
                                                     {foreach from=$server_list item="server"}
                                                         <option value="{$server.sid}" id="ss{$server.sid}">正在检索
                                                             主机名...
@@ -159,7 +159,7 @@
                                             value="radiobutton" />
 
                                         <label for="other_length" class="form-label form-label:bottom form-label:right">
-                                            长度
+                                            时长
                                         </label>
 
                                         <div class="flex">
@@ -213,7 +213,7 @@
                                                     <option value="241920">6月</option>
                                                     <option value="483840">12月</option>
                                                 </optgroup>
-                                                <option value="other">其他长度（分钟）</option>
+                                                <option value="other">其他时长（分钟）</option>
                                             </select>
 
                                             <input type="text" id="other_length" name="other_length"

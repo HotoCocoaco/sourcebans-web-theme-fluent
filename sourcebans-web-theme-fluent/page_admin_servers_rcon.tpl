@@ -14,7 +14,7 @@
 -{else}-
 <div id="admin-page-content">
   <div class="admin_tab_content_title">
-    <h2 class="fas fa-laptop-code"> RCON Console</h2>
+    <h2 class="fas fa-laptop-code"> RCON 控制台</h2>
   </div>
 
   <div class="padding">
@@ -27,7 +27,7 @@
 
     <div class='flex flex-ai:end flex-jc:space-between margin-top'>
       <div class="flex:11 margin-right">
-        <label for="cmd" class="form-label form-label:bottom">Command:</label>
+        <label for="cmd" class="form-label form-label:bottom">命令:</label>
         <input type="text" class="form-input form-full" id="cmd" name="cmd" />
       </div>
 
@@ -44,7 +44,7 @@
 
   function SendRcon() {
     xajax_SendRcon('-{$id}-', $('cmd').value, true);
-    $('cmd').value = 'Executing, 请等待...';
+    $('cmd').value = '执行中, 请等待...';
     $('cmd').disabled = 'true';
     $('rcon_btn').disabled = 'true';
 

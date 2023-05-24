@@ -13,22 +13,22 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-users"></i> Groups</h2>
+        <h2><i class="fas fa-users"></i> 组</h2>
     </div>
 
     <div class="padding">
         <div>
-            Click on a group to view its permissions.
+            点击一个组来查看它的权限
         </div>
 
-        <h3 style="color: var(--table-permanent-text);">Web Admin Groups ({$web_group_count})</h3>
+        <h3 style="color: var(--table-permanent-text);">网页管理员组 ({$web_group_count})</h3>
 
         <div class="table table_box">
             <table>
                 <thead>
                     <tr>
-                        <th class="text:left">Group Name</th>
-                        <th class="text:left">Admins in group</th>
+                        <th class="text:left">组名称</th>
+                        <th class="text:left">组内的管理员</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -47,7 +47,7 @@
                                 {if $permission_editgroup}
                                     <a class="button button-light margin-right:half"
                                         href="index.php?p=admin&c=groups&o=edit&type=web&id={$group.gid}">
-                                        Edit
+                                        编辑
                                     </a>
                                 {/if}
 
@@ -63,7 +63,7 @@
                                 <div class="collapse_content">
                                     <div class="padding:half flex m:flex-fd:column">
                                         <div class="flex:11">
-                                            <h4>Permissions</h4>
+                                            <h4>权限</h4>
 
                                             <ul>
                                                 {if $group.permissions}
@@ -71,13 +71,13 @@
                                                         <li>{$permission}</li>
                                                     {/foreach}
                                                 {else}
-                                                    <li class="text:italic">None</li>
+                                                    <li class="text:italic">无</li>
                                                 {/if}
                                             </ul>
                                         </div>
 
                                         <div class="flex:11">
-                                            <h4>Members</h4>
+                                            <h4>成员</h4>
 
                                             <div class="table table_box">
                                                 <table>
@@ -91,14 +91,14 @@
                                                                     <td class="flex flex-jc:center flex-ai:center">
                                                                         <a class="button button-light margin-right:half"
                                                                             href="index.php?p=admin&c=admins&o=editgroup&id={$web_admin.aid}"
-                                                                            title="Edit Groups">
-                                                                            Edit
+                                                                            title="编辑组">
+                                                                            编辑
                                                                         </a>
 
                                                                         <a class="button button-infos"
                                                                             href="index.php?p=admin&c=admins&o=editgroup&id={$web_admin.aid}&wg="
                                                                             title="Remove From Group">
-                                                                            Remove
+                                                                            移除
                                                                         </a>
                                                                     </td>
                                                                 {/if}
@@ -117,14 +117,14 @@
                 </tbody>
             </table>
         </div>
-        	<h3 style="color: var(--table-unbanned-text);">服务器 Admin Groups ({$server_admin_group_count})</h3>
+        	<h3 style="color: var(--table-unbanned-text);">服务器管理员组 ({$server_admin_group_count})</h3>
 
         <div class="table table_box">
             <table>
                 <thead>
                     <tr>
-                        <th class="text:left">Group Name</th>
-                        <th class="text:left">Admins in group</th>
+                        <th class="text:left">组名称</th>
+                        <th class="text:left">组内管理员</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -143,7 +143,7 @@
                                 {if $permission_editgroup}
                                     <a class="button button-light margin-right:half"
                                         href="index.php?p=admin&c=groups&o=edit&type=srv&id={$group.id}">
-                                        Edit
+                                        编辑
                                     </a>
                                 {/if}
 
@@ -158,7 +158,7 @@
                                 <div class="collapse_content">
                                     <div class="padding:half flex m:flex-fd:column">
                                         <div class="flex:11">
-                                            <h4>Permissions</h4>
+                                            <h4>权限</h4>
 
                                             <ul>
                                                 {if $group.permissions}
@@ -166,13 +166,13 @@
                                                         <li>{$permission}</li>
                                                     {/foreach}
                                                 {else}
-                                                    <li class="text:italic">None</li>
+                                                    <li class="text:italic">无</li>
                                                 {/if}
                                             </ul>
                                         </div>
 
                                         <div class="flex:11">
-                                            <h4>Members</h4>
+                                            <h4>成员</h4>
 
                                             <div class="table table_box">
                                                 <table>
@@ -186,14 +186,14 @@
                                                                     <td class="flex flex-jc:center flex-ai:center">
                                                                         <a class="button button-light margin-right:half"
                                                                             href="index.php?p=admin&c=admins&o=editgroup&id={$server_admin.aid}"
-                                                                            title="Edit Groups">
-                                                                            Edit
+                                                                            title="编辑组">
+                                                                            编辑
                                                                         </a>
 
                                                                         <a class="button button-important"
                                                                             href="index.php?p=admin&c=admins&o=editgroup&id={$server_admin.aid}&sg="
-                                                                            title="Remove From Group">
-                                                                            Remove
+                                                                            title="从组内移除">
+                                                                            移除
                                                                         </a>
                                                                     </td>
                                                                 {/if}
@@ -211,8 +211,8 @@
                                                 <thead>
                                                     <tr>
                                                         <th class="text:left">类型</th>
-                                                        <th class="text:left">Name</th>
-                                                        <th class="text:left">Access</th>
+                                                        <th class="text:left">名称</th>
+                                                        <th class="text:left">访问能力</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -235,14 +235,14 @@
             </table>
         </div>
 
-        <h3>服务器 Groups ({$server_group_count})</h3>
+        <h3>服务器组 ({$server_group_count})</h3>
 
         <div class="table table_box">
             <table>
                 <thead>
                     <tr>
-                        <th class="text:left">Group Name</th>
-                        <th class="text:left">Admins in group</th>
+                        <th class="text:left">组名称</th>
+                        <th class="text:left">组内管理员</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -261,7 +261,7 @@
                                 {if $permission_editgroup}
                                     <a class="button button-light margin-right:half"
                                         href="index.php?p=admin&c=groups&o=edit&type=server&id={$group.gid}">
-                                        Edit
+                                        编辑
                                     </a>
                                 {/if}
 
@@ -276,7 +276,7 @@
                             <td colspan="8">
                                 <div class="collapse_content">
                                     <div class="padding">
-                                        <h3>Servers in this group</h3>
+                                        <h3>组内服务器</h3>
 
                                         <ul>
                                             <li id="servers_{$group.gid}">请等待!</li>

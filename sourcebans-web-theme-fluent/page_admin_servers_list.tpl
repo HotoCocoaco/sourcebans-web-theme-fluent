@@ -3,7 +3,7 @@
         拒绝访问
     {else}
         <div class="admin_tab_content_title">
-            <h2><i class="fas fa-server"></i> Servers (<span id="srvcount">{$server_count}</span>)</h2>
+            <h2><i class="fas fa-server"></i> 服务器 (<span id="srvcount">{$server_count}</span>)</h2>
         </div>
 
         <div class="padding">
@@ -13,8 +13,8 @@
                         <tr>
                             <th>ID</th>
                             <th>Mod</th>
-                            <th class="text:left">Hostname</th>
-                            <th>Players</th>
+                            <th class="text:left">主机名</th>
+                            <th>玩家</th>
                             <th>操作</th>
                         </tr>
                     </thead>
@@ -33,7 +33,7 @@
                                 </td>
                                 <td id="host_{$server.sid}">
                                     <span class="text:italic">
-                                        Querying 服务器 Data...
+                                        获取服务器数据...
                                     </span>
                                 </td>
                                 <td id="players_{$server.sid}" class="text:center">
@@ -54,14 +54,14 @@
                                         <li>
                                             <a class="button button-light"
                                                 href="index.php?p=admin&c=servers&o=admincheck&id={$server.sid}">
-                                                Admins
+                                                管理员
                                             </a>
                                         </li>
                                         {if $permission_editserver}
                                             <li>
                                                 <a class="button button-light"
                                                     href="index.php?p=admin&c=servers&o=edit&id={$server.sid}">
-                                                    Edit
+                                                    编辑
                                                 </a>
                                             </li>
                                         {/if}
@@ -83,9 +83,9 @@
 
             {if $permission_addserver}
                 <div class="margin-top">
-                    <button class="button button-light" title="Click here to upload a screenshot of a map. Use the mapname as filename." id="upload"
+                    <button class="button button-light" title="单击此处上载地图截图。使用地图名作为文件名。" id="upload"
                         onclick="childWindow=open('pages/admin.uploadmapimg.php','upload','resizable=yes,width=300,height=130');">
-                        Upload Map Image
+                        上传地图截图
                     </button>
                     <div id="mapimg.msg" class="message message:error margin-top:half" style="display: none;"></div>
                 </div>

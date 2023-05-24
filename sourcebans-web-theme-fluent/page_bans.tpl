@@ -23,8 +23,8 @@
           <input type="hidden" name="page" id="page" value="{$page}">
 
 		{if $canedit}
-		  <a class="button button-important" onclick="history.go(-1)">Cancel</a>
-          <a class="button button-success" onclick="ProcessComment();">Add</a>
+		  <a class="button button-important" onclick="history.go(-1)">取消</a>
+          <a class="button button-success" onclick="ProcessComment();">添加</a>
 		{/if}
         </div>
         {foreach from=$othercomments item="com"}
@@ -66,13 +66,13 @@
                                 <input type="checkbox" title="选择全部" name="tickswitch" id="tickswitch" onclick="TickSelectAll()" class="form-check" />
                             </th>
                         {/if}
-                        <th>MOD/Country</th>
+                        <th>MOD/地区</th>
                         <th class="text:left">日期</th>
-                        <th class="text:left">Player</th>
+                        <th class="text:left">玩家</th>
                         {if !$hideadminname}
                             <th class="text:left">管理员</th>
                         {/if}
-                        <th class="text:left">Length</th>
+                        <th class="text:left">时长</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -89,7 +89,7 @@
                             <td class="text:center">{$ban.mod_icon}</td>
                             <td>{$ban.ban_date}</td>
                                 {if empty($ban.player)}
-                                    <td class="text:italic">No nickname present</td>
+                                    <td class="text:italic">无昵称</td>
                                 {else}
                                     <td>
 	    			  	                {if $view_comments && $ban.commentdata != "None" && $ban.commentdata|@count > 0}
@@ -120,7 +120,7 @@
 							<li class="button button-light">{$ban.demo_link}</li>
                                                     {if !$login}
                                                         <li>
-                                                            <a class="button button-success" href='index.php?p=login'>Admin ? Sign In</a>
+                                                            <a class="button button-success" href='index.php?p=login'>管理员 ? 登录</a>
                                                         </li>
 													{elseif $view_bans}
                                                         {if ($ban.view_edit && !$ban.unbanned)}
@@ -149,9 +149,9 @@
                                                 </ul>
                                                 <ul class="ban_list_detal">
                                                     <li>
-                                                        <span><i class="fas fa-user"></i> Player</span>
+                                                        <span><i class="fas fa-user"></i> 玩家</span>
                                                             {if empty($ban.player)}
-                                                            <span class="text:italic">No nickname present</span>
+                                                            <span class="text:italic">无昵称</span>
                                                         {else}
                                                             <span>{$ban.player|escape:'html'|smarty_stripslashes}</span>
                                                         {/if}
@@ -159,7 +159,7 @@
                                                     <li>
                                                         <span><i class="fab fa-steam-symbol"></i> Steam ID</span>
                                                         {if empty($ban.steamid)}
-                                                            <span class="text:italic">No Steam ID present</span>
+                                                            <span class="text:italic">无Steam ID</span>
                                                         {else}
                                                             <span>{$ban.steamid}</span>
                                                         {/if}
@@ -167,7 +167,7 @@
                                                 <li>
                                                         <span><i class="fab fa-steam-symbol"></i> Steam3 ID</span>
                                                         {if empty($ban.steamid)}
-                                                            <span class="text:italic">No Steam3 ID present</span>
+                                                            <span class="text:italic">无Steam3 ID</span>
                                                         {else}
                                                             <span>
                                                                 <a href="http://steamcommunity.com/profiles/{$ban.steamid3}" target="_blank" rel="noopener">{$ban.steamid3}</a>
@@ -176,9 +176,9 @@
                                                     </li>
                                                     {if $ban.type == 0}
                                                         <li>
-                                                            <span><i class="fab fa-steam-symbol"></i> Steam Community</span>
+                                                            <span><i class="fab fa-steam-symbol"></i> Steam 社区</span>
                                                             {if empty($ban.steamid)}
-                                                                <span class="text:italic">No Steam Community ID present</span>
+                                                                <span class="text:italic">无Steam社区ID</span>
                                                             {else}
                                                                 <span>
                                                                     <a href="http://steamcommunity.com/profiles/{$ban.communityid}" target="_blank" rel="noopener">{$ban.communityid}</a>
@@ -201,20 +201,20 @@
                                                             <span>{$ban.ban_date}</span>
                                                         </li>
                                                         <li>
-                                                            <span><i class="fas fa-hourglass-half"></i> Ban length</span>
+                                                            <span><i class="fas fa-hourglass-half"></i> 封禁时长</span>
                                                             <span>{$ban.banlength}</span>
                                                         </li>
                                                     {if $ban.unbanned}
                                                         <li>
-                                                            <span><i class="fas fa-user-shield"></i> Unban reason</span>
+                                                            <span><i class="fas fa-user-shield"></i> 解封原因</span>
                                                             {if $ban.ureason == ""}
-                                                                <span class="text:italic">No reason present</span>
+                                                                <span class="text:italic">无原因</span>
                                                             {else}
                                                                 <span>{$ban.ureason}</span>
                                                             {/if}
                                                         </li>
                                                         <li>
-                                                            <span><i class="fas fa-user-shield"></i> Unbanned by Admin</span>
+                                                            <span><i class="fas fa-user-shield"></i> 被管理员解封</span>
                                                             {if empty($ban.removedby)}
                                                                 <span class="text:italic">管理员已删除</span>
                                                             {else}
@@ -223,15 +223,15 @@
                                                         </li>
                                                     {/if}
                                                     <li>
-                                                        <span><i class="fas fa-clock"></i> Expires on</span>
+                                                        <span><i class="fas fa-clock"></i> 过期于</span>
                                                         {if $ban.expires == "never"}
-                                                            <span class="text:italic">Not applicable</span>
+                                                            <span class="text:italic">不适用</span>
                                                         {else}
                                                             <span>{$ban.expires}</span>
                                                         {/if}
                                                     </li>
                                                     <li>
-                                                        <span><i class="fas fa-question"></i> Reason</span>
+                                                        <span><i class="fas fa-question"></i> 原因</span>
                                                         <span>{$ban.reason|escape:'html'}</span>
                                                     </li>
                                                     {if !$hideadminname}
@@ -245,23 +245,23 @@
                                                         </li>
                                                     {/if}
                                                     <li>
-                                                        <span><i class="fas fa-ban"></i> Total Bans</span>
+                                                        <span><i class="fas fa-ban"></i> 总计封禁</span>
                                                         <span>{$ban.prevoff_link}</span>
                                                     </li>
 			    		                            <li>
                                                         <span><i class="fas fa-server"></i> 封禁于 </span>
                                                             <span {if $ban.server_id != 0} id="host_{$ban.ban_id}"{/if}>
                                                                 {if $ban.server_id == 0}
-                                                                Web Ban
+                                                                网页封禁
                                                                 {else}
                                                                 请等待...
                                                                 {/if}
                                                             </span>
                                                     </li>
                                                     <li>
-                                                        <span><i class="fas fa-ban"></i> Blocked ({$ban.blockcount})</span>
+                                                        <span><i class="fas fa-ban"></i> 限制 ({$ban.blockcount})</span>
                                                         {if $ban.banlog == ""}
-                                                            <span class="text:italic">Never</span>
+                                                            <span class="text:italic">从无</span>
                                                         {else}
                                                             <i>{$ban.banlog}</i>
                                                         {/if}
@@ -293,7 +293,7 @@
                                                                                 {if !empty($commenta.edittime)}
                                                                                     <span class="margin-top:half text:italic">
                                                                                         <i class="fas fa-pencil-alt"></i> 最后编辑于
-                                                                                        {$commenta.edittime} by {if !empty($commenta.editname)}{$commenta.editname}{else}<i>管理员已删除</i>{/if}
+                                                                                        {$commenta.edittime} 由 {if !empty($commenta.editname)}{$commenta.editname}{else}<i>管理员已删除</i>{/if}
                                                                                     </span>
                                                                                 {/if}
                                                                             </div>
@@ -326,7 +326,7 @@
                     <select name="bulk_action" id="bulk_action" onchange="BulkEdit(this,'{$admin_postkey}');" class="form-select">
                         <option value="-1">操作</option>
                         {if $general_unban}
-                            <option value="U">Unban</option>
+                            <option value="U">解封</option>
                         {/if}
                         {if $can_delete}
                             <option value="D">删除</option>
@@ -337,10 +337,10 @@
             {if $can_export}
                 <ul class="list-reset text:right">
                     <li>
-                        <a href="./exportbans.php?type=steam" title="Export 永久 SteamID Bans">Export 永久 SteamID Bans</a>
+                        <a href="./exportbans.php?type=steam" title="Export 永久 SteamID Bans">导出永久 SteamID 封禁</a>
                     </li>
                     <li>
-                        <a href="./exportbans.php?type=ip" title="Export 永久 IP Bans">Export 永久 IP Bans</a>
+                        <a href="./exportbans.php?type=ip" title="Export 永久 IP Bans">导出永久 IP 封禁</a>
                     </li>
                 </ul>
             {/if}

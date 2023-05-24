@@ -13,12 +13,12 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-microphone-alt-slash"></i> 增加阻挡</h2>
+        <h2><i class="fas fa-microphone-alt-slash"></i> 增加限制</h2>
     </div>
 
     <div class="padding">
         <div id="msg-green" class="message message:succes margin-bottom:half" style="display: none;">
-            <h3>已增加阻挡</h3>
+            <h3>已增加限制</h3>
             <div>新信息已成功添加到系统中。</div>
             <div class="text:italic">重定向到交流页面</div>
         </div>
@@ -56,7 +56,7 @@
 
         <div class="margin-bottom:half">
             <label for="type" class="form-label form-label:bottom">
-                阻挡类型
+                限制类型
             </label>
 
             <select id="type" name="type" TABINDEX=2 class="form-select form-full">
@@ -68,7 +68,7 @@
 
         <div class="margin-bottom:half">
             <label for="listReason" class="form-label form-label:bottom">
-                阻挡原因
+                限制原因
             </label>
 
             <select id="listReason" name="listReason" TABINDEX=4 class="form-select form-full"
@@ -92,14 +92,14 @@
             </div>
 
             <div class="form-desc">
-                详细解释为什么要制作这个阻挡。
+                详细解释为什么要制作这个限制。
             </div>
             <div id="reason.msg" class="message message:error margin-top:half" style="display: none;"></div>
         </div>
 
         <div class="margin-bottom:half">
             <label for="banlength" class="form-label form-label:bottom">
-                阻挡时长
+                限制时长
             </label>
 
             <select id="banlength" TABINDEX=5 class="form-select form-full">
@@ -146,7 +146,7 @@
         </div>
 
         <div class="flex flex-ai:center flex-jc:space-between margin-top">
-            {sb_button text="增加阻挡" onclick="ProcessBan();" class="button button-success" id="aban" submit=false}
+            {sb_button text="增加限制" onclick="ProcessBan();" class="button button-success" id="aban" submit=false}
             {sb_button text="返回" onclick="history.go(-1)" class="button button-light" id="aback"}
         </div>
     </div>

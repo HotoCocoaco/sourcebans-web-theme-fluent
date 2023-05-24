@@ -1,5 +1,5 @@
 <div class="admin_tab_content_title">
-    <h2>System Log {$clear_logs}</h2>
+    <h2>系统日志 {$clear_logs}</h2>
 </div>
 
 <div class="padding">
@@ -14,9 +14,9 @@
             <thead>
                 <tr>
                     <th>类型</th>
-                    <th class="text:left">Event</th>
-                    <th class="text:left">Date/Time</th>
-                    <th>User</th>
+                    <th class="text:left">时间</th>
+                    <th class="text:left">日期/时间</th>
+                    <th>用户</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,22 +36,22 @@
                                     </div>
 
                                     <div class="margin-bottom:half">
-                                        <span class="text:bold">Parent Function:</span>
+                                        <span class="text:bold">父函数:</span>
 
                                         {if $log.function}
                                             <span>{$log.function}</span>
                                         {else}
-                                            <span class="text:italic">No information</span>
+                                            <span class="text:italic">无信息</span>
                                         {/if}
                                     </div>
 
                                     <div class="margin-bottom:half">
-                                        <span class="text:bold">Query String:</span>
+                                        <span class="text:bold">查询字符串:</span>
 
                                         {if $log.query}
                                             <span>{textformat wrap=62 wrap_cut=true}{$log.query}{/textformat}</span>
                                         {else}
-                                            <span class="text:italic">No information</span>
+                                            <span class="text:italic">无信息</span>
                                         {/if}
                                     </div>
 
